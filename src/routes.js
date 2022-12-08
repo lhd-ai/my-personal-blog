@@ -8,6 +8,10 @@ const routes = [
   {
     path:'/login',
     component:Login
+  },
+  {
+    path:'/home',
+    component:() => import('./components/Home/home.vue')
   }
 ]
 const router = VueRouter.createRouter({

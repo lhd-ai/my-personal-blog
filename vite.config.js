@@ -13,7 +13,7 @@ export default defineConfig({
     }),
     Components({
       resolvers: [ElementPlusResolver()],
-    }),
+    })
   ],
   base: '/my-personal-blog/'
 })
