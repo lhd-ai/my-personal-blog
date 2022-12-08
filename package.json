@@ -12,6 +12,7 @@
     "axios": "^1.2.1",
     "element-plus": "^2.2.26",
     "sass": "^1.56.1",
+    "vite-plugin-markdown": "^2.1.0",
     "vue": "^3.2.41",
     "vue-router": "^4.1.6"
   },
