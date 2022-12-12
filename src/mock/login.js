@@ -4,6 +4,7 @@ Mock.mock('/login', 'post', option => {
   const { username, password } = JSON.parse(option.body)
   if(username === 'lhd' && password === 'woaixuexi666'){
     return {
+      name:'lhd',
       code:200,
       msg:'登录成功'
     }

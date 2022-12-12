@@ -21,8 +21,8 @@ import { toRaw } from 'vue'
 export default {
   data() {
     return {
-      username: '',
-      password: ''
+      username: 'lhd',
+      password: 'woaixuexi666'
     }
   },
   methods: {
@@ -47,6 +47,7 @@ export default {
             })
           }else{
             this.$router.replace('/home')
+            sessionStorage['username'] = res.data.name
             ElMessage({
               showClose: true,
               message: res.data.msg,

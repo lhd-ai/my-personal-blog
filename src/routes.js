@@ -11,7 +11,35 @@ const routes = [
   },
   {
     path:'/home',
-    component:() => import('./components/Home/home.vue')
+    component:() => import('./components/Home/home.vue'),
+    children:[
+      {
+        path:'',
+        name:'technology',
+        component: () => import('./components/Home/Technology/index.vue'),
+        children:[
+          {
+            path:'',
+            component: () => import('./components/Home/Technology/markdown.vue')
+          }
+        ]
+      },
+      {
+        path:'/technology',
+        component: () => import('./components/Home/Technology/index.vue'),
+        children:[
+          {
+            path:'',
+            component: () => import('./components/Home/Technology/markdown.vue')
+          },
+          {
+            path:'/git',
+            name:'git',
+            component: () => import('./components/Home/Technology/git.vue')
+          }
+        ]
+      }
+    ]
   }
 ]
 const router = VueRouter.createRouter({

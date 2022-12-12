@@ -3,7 +3,8 @@
   font-size: 16px;
   line-height: 24px;
   font-weight: 400;
-
+  overflow-y: auto;
+  overflow-x: hidden;
   color-scheme: light dark;
 
 
@@ -17,7 +18,19 @@ body {
   margin: 0;
   min-width: 320px;
   min-height: 100vh;
+  width: 100vw;
 }
+*{
+  box-sizing: border-box;
+}
+html {
+  overflow-y: scroll;
+}
+
+:root body {
+  position: absolute;
+  }
+
 /* a {
   font-weight: 500;
   color: #646cff;
