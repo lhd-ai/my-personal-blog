@@ -7,15 +7,10 @@
       <div class="item" v-for="item in dataList" :key="item.name">
         <el-dropdown :disabled="!item.children">
           <div class="el-dropdown-link">
-            {{ item.name }}
+            <router-link :to="item.path">{{ item.name }}</router-link>
            <div>
            </div>
           </div>
-          <template #dropdown v-if="item.children">
-            <el-dropdown-menu v-for="child in item.children" :key="child.name">
-              <el-dropdown-item>{{ child.name }}</el-dropdown-item>
-            </el-dropdown-menu>
-          </template>
         </el-dropdown>
       </div>
     </div>
@@ -118,6 +113,9 @@ export default {
     display: flex;
     align-items: center;
     justify-content: center;
+  }
+  a{
+    text-decoration: none
   }
 }
 </style>

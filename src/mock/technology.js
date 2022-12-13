@@ -3,7 +3,7 @@ import Mock from "mockjs";
 let list = [
   {
     name:'markdown',
-    path:'/technology',
+    path:'/markdown',
   },
   {
     name:'git',

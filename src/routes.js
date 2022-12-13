@@ -15,7 +15,6 @@ const routes = [
     children:[
       {
         path:'',
-        name:'technology',
         component: () => import('./components/Home/Technology/index.vue'),
         children:[
           {
@@ -33,9 +32,31 @@ const routes = [
             component: () => import('./components/Home/Technology/markdown.vue')
           },
           {
+            path:'/markdown',
+            component: () => import('./components/Home/Technology/markdown.vue')
+          },
+          {
             path:'/git',
             name:'git',
             component: () => import('./components/Home/Technology/git.vue')
+          }
+        ]
+      },
+      {
+        path:'/buildtools',
+        component: () => import('./components/Home/BuildTools/index.vue'),
+        children:[
+          {
+            path:'',
+            component: () => import('./components/Home/BuildTools/webpack.vue')
+          },
+          {
+            path:'/webpack',
+            component: () => import('./components/Home/BuildTools/webpack.vue')
+          },
+          {
+            path:'/vite',
+            component: () => import('./components/Home/BuildTools/vite.vue')
           }
         ]
       }

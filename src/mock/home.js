@@ -2,13 +2,16 @@ import Mock from "mockjs";
 
 let dataList = [
   {
-    name:'前端'
+    name:'前端',
+    path:''
   },
   {
-    name:'构建工具'
+    name:'构建工具',
+    path:'/buildtools'
   },
   {
-    name:'技术'
+    name:'技术',
+    path:'/technology'
   }
 ]
 

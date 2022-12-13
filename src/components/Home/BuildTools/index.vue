@@ -14,36 +14,36 @@
 </template>
 
 <script>
-import request from '../../../request';
+import request from '../../../request/index'
 import { toRaw } from 'vue';
 export default {
   data() {
     return {
       username: sessionStorage['username'],
       dataList: [],
-      activeIndex: '/markdown',
+      activeIndex:'/webpack'
     }
   },
   created() {
     this.getDataList()
-    this.activeIndex = sessionStorage.getItem('keyPath') || '/markdown';
+    this.activeIndex = sessionStorage.getItem('keyPathTwo') || '/webpack';
   },
   watch:{
     activeIndex(newValue){
-     if(newValue != this.$route.path){
-      if(this.$route.path == '/technology' || this.$route.path == '/home'){
-        this.activeIndex = '/markdown'
+      if(newValue !== this.$route.path){
+        if(this.$route.path == '/buildtools'){
+          this.activeIndex = '/webpack'
+        }
       }
-     }
     }
   },
   methods: {
     handleSelect(keyPath) {
-      sessionStorage.setItem('keyPath', keyPath);
+      sessionStorage.setItem('keyPathTwo', keyPath);
     },
     getDataList() {
       request({
-        url: '/technology',
+        url: '/buildtools',
         method: 'get',
         data: {
           username: toRaw(this.username)
@@ -51,7 +51,7 @@ export default {
       })
         .then(res => {
           if (res.data.code == 200) {
-            this.dataList = res.data.list
+            this.dataList = res.data.obj
           }
         })
     }
@@ -59,6 +59,6 @@ export default {
 }
 </script>
 
-<style lang="less" scoped>
+<style>
 
 </style>
