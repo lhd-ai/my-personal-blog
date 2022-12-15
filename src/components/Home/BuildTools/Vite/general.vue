@@ -1,5 +1,5 @@
 <template>
-  vite
+  vite基本配置
 </template>
 
 <script>

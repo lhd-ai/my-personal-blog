@@ -7,7 +7,16 @@ let obj = [
   },
   {
     name: 'vite',
-    path: '/vite'
+    children:[
+      {
+        name:'vite介绍',
+        path:'/vite-intro'
+      },
+      {
+        name:'vite基本配置',
+        path:'/vite-general'
+      }
+    ]
   }
 ]
 Mock.mock('/buildtools', 'get', option => {

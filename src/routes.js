@@ -55,8 +55,12 @@ const routes = [
             component: () => import('./components/Home/BuildTools/webpack.vue')
           },
           {
-            path:'/vite',
-            component: () => import('./components/Home/BuildTools/vite.vue')
+            path:'/vite-intro',
+            component: () => import('./components/Home/BuildTools/Vite/intro.vue')
+          },
+          {
+            path:'/vite-general',
+            component: () => import('./components/Home/BuildTools/Vite/general.vue')
           }
         ]
       }
