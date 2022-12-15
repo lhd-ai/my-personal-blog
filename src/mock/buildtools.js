@@ -9,11 +9,15 @@ let obj = [
     name: 'vite',
     children:[
       {
-        name:'vite介绍',
+        name:'介绍',
         path:'/vite-intro'
       },
       {
-        name:'vite基本配置',
+        name:'开始',
+        path:'/vite-start'
+      },
+      {
+        name:'基本配置',
         path:'/vite-general'
       }
     ]

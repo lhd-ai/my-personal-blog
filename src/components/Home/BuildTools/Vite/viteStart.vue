@@ -5,9 +5,9 @@
 </template>
 
 <script>
-import { VueComponent } from "../../../../markdown/viteIntro.md";
+import { VueComponent } from '../../../../markdown/viteStart.md'
 export default {
-  components: {
+  components:{
     MarkDownComponent:VueComponent
   }
 }
