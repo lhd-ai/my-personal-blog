@@ -5,7 +5,7 @@
 </template>
 
 <script>
-import { VueComponent } from '../../../../markdown/viteConFigure.md'
+import { VueComponent } from "../../../../markdown/viteRelyOn.md"
 export default {
   components: {
     MarkDownComponent:VueComponent

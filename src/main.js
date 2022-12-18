@@ -6,6 +6,7 @@ import './mock/login'
 import'./mock/home'
 import './mock/technology'
 import './mock/buildtools'
+import './mock/fontend'
 // import 'element-plus/theme-chalk/src/index.scss'
 const app = createApp(App)
 app.use(router)

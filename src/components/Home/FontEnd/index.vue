@@ -55,7 +55,7 @@ export default {
     },
     getDataList() {
       request({
-        url: '/buildtools',
+        url: '/fontend',
         method: 'get',
         data: {
           username: toRaw(this.username)

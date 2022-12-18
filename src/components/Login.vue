@@ -46,8 +46,8 @@ export default {
               duration:2000
             })
           }else{
-            this.$router.replace('/home')
             sessionStorage['username'] = res.data.name
+            this.$router.replace('/home')
             ElMessage({
               showClose: true,
               message: res.data.msg,

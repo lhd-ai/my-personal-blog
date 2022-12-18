@@ -46,6 +46,7 @@ export default {
   },
   methods: {
     signOut() {
+      sessionStorage.removeItem('username')
       this.$router.replace('/login')
     },
     getData() {

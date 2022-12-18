@@ -19,6 +19,34 @@ let obj = [
       {
         name:'基本配置',
         path:'/vite-general'
+      },
+      {
+        name:'共享配置',
+        path:'/vite-shareConfigure'
+      },
+      {
+        name:'服务器选项',
+        path:'/vite-serve'
+      },
+      {
+        name:'构建选项',
+        path:'/vite-structure'
+      },
+      {
+        name:'预览选项',
+        path:'/vite-preview'
+      },
+      {
+        name:'依赖优化选项',
+        path:'/vite-relyon'
+      },
+      {
+        name:'SSR选项',
+        path:'/vite-ssr'
+      },
+      {
+        name:'Worker选项',
+        path:'/vite-worker'
       }
     ]
   }

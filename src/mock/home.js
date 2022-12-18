@@ -3,7 +3,7 @@ import Mock from "mockjs";
 let dataList = [
   {
     name:'前端',
-    path:''
+    path:'/fontend'
   },
   {
     name:'构建工具',

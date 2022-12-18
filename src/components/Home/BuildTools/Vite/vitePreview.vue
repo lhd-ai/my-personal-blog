@@ -5,10 +5,10 @@
 </template>
 
 <script>
-import { VueComponent } from '../../../../markdown/viteConFigure.md'
+import { VueComponent } from "../../../../markdown/vitePreview.md"
 export default {
-  components: {
-    MarkDownComponent:VueComponent
+  components:{
+    MarkDownComponent: VueComponent
   }
 }
 </script>
