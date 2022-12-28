@@ -113,7 +113,7 @@ const routes = [
             path:'/vite-structure',
             component: () => import('./components/Home/BuildTools/Vite/structure.vue'),
             meta:{
-              textName:'vite开发服务器选项'
+              textName:'vite构建选项'
             }
           },
           {
@@ -138,10 +138,17 @@ const routes = [
             }
           },
           {
+            path:'/vite-difference',
+            component: () => import('./components/Home/BuildTools/Vite/difference.vue'),
+            meta:{
+              textName:'vite与webpack区别'
+            }
+          },
+          {
             path:'/vite-worker',
             component: () => import('./components/Home/BuildTools/Vite/viteWorker.vue'),
             meta:{
-              textName:'viteSSR选项'
+              textName:'viteworker选项'
             }
           }
         ]

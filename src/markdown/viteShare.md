@@ -62,4 +62,29 @@
 * **默认：** "node_modules/.vite"
 存储缓存文件的目录。此目录下会存储预打包的依赖项或vite生产的某些缓存文件使用缓存可以提高性能。如需重新生成缓存文件，你可以使用--force命令行选项或手动删除目录。此选项的值可以是文件的绝对路径，也可以是以项目根目录为基准的相对路径。当没有检测到package.json时则默认为.vite
 
+***
 
+#### envPrefix
+* **类型：** string[] | string
+* **默认:** VITE_
+
+<p>以envPrefix开头的环境变量会通过import.meta.env暴露在你的客户端源码中（默认以VITE_开头设置的变量才能在客户端通过import.meta.env中看到，envPrefix可以修改以什么开头）</p>
+<p><font color="red">注意：envPrefix不应设置为空字符串，这将暴露你所有的环境变量，导致敏感信息的意外泄漏。检测到配置为''时VIte将会抛出错误</font></p>
+
+***
+
+#### css.modules(针对css模块化的设置)
+<p>css模块化(.module.css)会将css文件里的类名进行替换，会生成一个映射对象（对象里的key值为我们设置的类型，值为替换后的值）然后会将替换后的内容复制放到style里放到head标签下。同时原css文件会被替换为js脚本默认导出映射对象</p>
+<P>css.modules有个值为localsConvention就是为了设置生成的映射对象的key值以驼峰式显示还是中划线显示</P>
+<p>scopeBehaviour:配置当前的模块化行为是模块化还是全局化（值为local就是开始模块化）</p>
+<p>generateScopedName:生成类名的命名规则</p>
+
+```
+export default defineConfig({
+  css:{
+    modules:{
+      localsConvention:'camelCase'
+    }
+  }
+})
+```

@@ -9,6 +9,10 @@ let obj = [
     name: 'vite',
     children:[
       {
+        name:'vite与webpack区别',
+        path:'/vite-difference'
+      },
+      {
         name:'介绍',
         path:'/vite-intro'
       },

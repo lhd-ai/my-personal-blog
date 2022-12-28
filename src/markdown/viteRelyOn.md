@@ -15,7 +15,7 @@
 
 #### optimizeDeps.exclude
 * **类型：** string[]
-<p>在预购建中强制排除的依赖项</p>
+<p>在预购建中强制排除的依赖项(遇到数组中包含的依赖则不对其进行依赖预购建)</p>
 <img src="../assets/vite/optimizedepsexclude.png" />
 
 ***

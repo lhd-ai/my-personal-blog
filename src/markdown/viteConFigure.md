@@ -33,5 +33,9 @@ ssrBuild 仍是实验性的。它只在构建过程中可用，而不是一个�
 ### 环境变量
 环境变量通常可以从process.env获得
 <br/>
+vite内置dotenv库会自动解析.env文件
+<br/>
 注意Vite默认是不加载.env文件的，因为这些文件需要在执行完Vite配置后才能确认加载哪一个，举个例子，root和envDir选项会影响加载行为。不过当你的确需要时，你可以使用Vite导出的loadEnv函数来加载指定的.env文件<br/>
+<p>process.cwd()返回当前node进程的工作目录</p>
+<p>客户端vite会将环境变量注入到import.meta.env中（环境变量在命名时需要以VITE开头）</p>
 <img src="../assets/vite/huanjingbianliang.png"/>
