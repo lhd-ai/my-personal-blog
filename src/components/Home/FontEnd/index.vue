@@ -1,12 +1,12 @@
 <template>
   <div class="temApp">
     <div class="temSidebar">
-      <el-menu class="menu" router="true" unique-opened="true" :default-active="activeIndex" @select="handleSelect">
+      <el-menu class="menu" router="true" unique-opened=true :default-active="activeIndex" @select="handleSelect" >
         <template v-for="(item, index) in dataList" :key="index">
           <el-menu-item v-if="!item.children" :index="item.path" :route="item.path">
             <span>{{ item.name }}</span>
           </el-menu-item>
-          <el-sub-menu v-if="item.children" index="item.name">
+          <el-sub-menu v-if="item.children" :index="item.name">
             <template #title>
               {{ item.name }}
             </template>
@@ -33,25 +33,26 @@ export default {
     return {
       username: sessionStorage['username'],
       dataList: [],
-      activeIndex: '/webpack'
+      activeIndex: '/vue3-setup',
+
     }
   },
   created() {
     this.getDataList()
-    this.activeIndex = sessionStorage.getItem('keyPathTwo') || '/webpack';
+    this.activeIndex = sessionStorage.getItem('keyPathThree') || '/vue3-setup';
   },
   watch: {
     activeIndex(newValue) {
       if (newValue !== this.$route.path) {
-        if (this.$route.path == '/buildtools') {
-          this.activeIndex = '/webpack'
+        if (this.$route.path == '/fontend') {
+          this.activeIndex = '/vue3-setup'
         }
       }
     }
   },
   methods: {
     handleSelect(keyPath) {
-      sessionStorage.setItem('keyPathTwo', keyPath);
+      sessionStorage.setItem('keyPathThree', keyPath);
     },
     getDataList() {
       request({

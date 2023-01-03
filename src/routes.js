@@ -2,182 +2,250 @@ import * as VueRouter from 'vue-router'
 import Login from './components/Login.vue'
 const routes = [
   {
-    path:'/:pathMatch(.*)*',
+    path: '/:pathMatch(.*)*',
     redirect: '/login'
   },
   {
-    path:'/login',
-    component:Login,
-    meta:{
-      textName:'登录'
+    path: '/login',
+    component: Login,
+    meta: {
+      textName: '登录'
     }
   },
   {
-    path:'/home',
-    component:() => import('./components/Home/home.vue'),
-    children:[
+    path: '/home',
+    component: () => import('./components/Home/home.vue'),
+    children: [
       {
-        path:'',
+        path: '',
         component: () => import('./components/Home/Technology/index.vue'),
-        children:[
+        children: [
           {
-            path:'',
+            path: '',
             component: () => import('./components/Home/Technology/markdown.vue'),
-            meta:{
-              textName:'技术'
+            meta: {
+              textName: '技术'
             },
           }
         ]
       },
       {
-        path:'/technology',
+        path: '/technology',
         component: () => import('./components/Home/Technology/index.vue'),
-        meta:{
-          textName:'技术'
+        meta: {
+          textName: '技术'
         },
-        children:[
+        children: [
           {
-            path:'',
+            path: '',
             component: () => import('./components/Home/Technology/markdown.vue')
           },
           {
-            path:'/markdown',
+            path: '/markdown',
             component: () => import('./components/Home/Technology/markdown.vue'),
-            meta:{
-              textName:'markdown'
+            meta: {
+              textName: 'markdown'
             }
           },
           {
-            path:'/git',
+            path: '/git',
             component: () => import('./components/Home/Technology/git.vue'),
-            meta:{
-              textName:'git'
+            meta: {
+              textName: 'git'
             }
           }
         ]
       },
       {
-        path:'/buildtools',
+        path: '/buildtools',
         component: () => import('./components/Home/BuildTools/index.vue'),
-        children:[
+        children: [
           {
-            path:'',
+            path: '',
             component: () => import('./components/Home/BuildTools/webpack.vue'),
-            meta:{
-              textName:'构建工具'
+            meta: {
+              textName: '构建工具'
             },
           },
           {
-            path:'/webpack',
+            path: '/webpack',
             component: () => import('./components/Home/BuildTools/webpack.vue'),
-            meta:{
-              textName:'webpack'
+            meta: {
+              textName: 'webpack'
             }
           },
           {
-            path:'/vite-intro',
+            path: '/vite-intro',
             component: () => import('./components/Home/BuildTools/Vite/intro.vue'),
-            meta:{
-              textName:'vite介绍'
+            meta: {
+              textName: 'vite介绍'
             }
           },
           {
-            path:'/vite-start',
+            path: '/vite-start',
             component: () => import('./components/Home/BuildTools/Vite/viteStart.vue'),
-            meta:{
-              textName:'vite开始'
+            meta: {
+              textName: 'vite开始'
             }
           },
           {
-            path:'/vite-general',
+            path: '/vite-general',
             component: () => import('./components/Home/BuildTools/Vite/general.vue'),
-            meta:{
-              textName:'配置vite'
+            meta: {
+              textName: '配置vite'
             }
           },
           {
-            path:'/vite-shareConfigure',
+            path: '/vite-shareConfigure',
             component: () => import('./components/Home/BuildTools/Vite/shareConFigure.vue'),
-            meta:{
-              textName:'vite共享配置'
+            meta: {
+              textName: 'vite共享配置'
             }
           },
           {
-            path:'/vite-serve',
+            path: '/vite-serve',
             component: () => import('./components/Home/BuildTools/Vite/viteServe.vue'),
-            meta:{
-              textName:'vite开发服务器选项'
+            meta: {
+              textName: 'vite开发服务器选项'
             }
           },
           {
-            path:'/vite-structure',
+            path: '/vite-structure',
             component: () => import('./components/Home/BuildTools/Vite/structure.vue'),
-            meta:{
-              textName:'vite构建选项'
+            meta: {
+              textName: 'vite构建选项'
             }
           },
           {
-            path:'/vite-preview',
+            path: '/vite-preview',
             component: () => import('./components/Home/BuildTools/Vite/vitePreview.vue'),
-            meta:{
-              textName:'vite预览选项'
+            meta: {
+              textName: 'vite预览选项'
             }
           },
           {
-            path:'/vite-relyon',
+            path: '/vite-relyon',
             component: () => import('./components/Home/BuildTools/Vite/relyOn.vue'),
-            meta:{
-              textName:'vite依赖优化'
+            meta: {
+              textName: 'vite依赖优化'
             }
           },
           {
-            path:'/vite-ssr',
+            path: '/vite-ssr',
             component: () => import('./components/Home/BuildTools/Vite/viteSsr.vue'),
-            meta:{
-              textName:'viteSSR选项'
+            meta: {
+              textName: 'viteSSR选项'
             }
           },
           {
-            path:'/vite-difference',
+            path: '/vite-difference',
             component: () => import('./components/Home/BuildTools/Vite/difference.vue'),
-            meta:{
-              textName:'vite与webpack区别'
+            meta: {
+              textName: 'vite与webpack区别'
             }
           },
           {
-            path:'/vite-worker',
+            path: '/vite-worker',
             component: () => import('./components/Home/BuildTools/Vite/viteWorker.vue'),
-            meta:{
-              textName:'viteworker选项'
+            meta: {
+              textName: 'viteworker选项'
             }
           }
         ]
       },
       {
-        path:'/fontend',
+        path: '/fontend',
         component: () => import('./components/Home/FontEnd/index.vue'),
-        meta:{
-          textName:'前端'
+        meta: {
+          textName: '前端'
         },
+        children: [
+          {
+            path: '',
+            component: () => import('./components/Home/FontEnd/vue3/setup.vue'),
+            meta: {
+              textName: '组合式API'
+            }
+          },
+          {
+            path:'/vue3',
+            children:[
+              {
+                path: '/vue3-setup',
+                component: () => import('./components/Home/FontEnd/vue3/setup.vue'),
+                meta: {
+                  textName: '组合式API'
+                }
+              },
+            ]
+          },
+          {
+            path:'/ts',
+            children:[
+              {
+                path: '/ts-originalData',
+                component: () => import('./components/Home/FontEnd/Ts/originalData.vue'),
+                meta: {
+                  textName: '原始数据类型'
+                }
+              },
+              {
+                path:'/ts-arbitranily',
+                component: () => import('@component/Home/FontEnd/Ts/arbitrarily.vue'),
+                meta: {
+                  textName: '任意值'
+                }
+              },
+              {
+                path:'/ts-typeInference',
+                component: () => import('@component/Home/FontEnd/Ts/typeInference.vue'),
+                meta:{
+                  textName:'类型推论'
+                }
+              },
+              {
+                path:"/ts-fedratedType",
+                component: () => import('@component/Home/Fontend/Ts/federatedType.vue'),
+                meta:{
+                  textName:'联合类型'
+                }
+              },
+              {
+                path:'/ts-interface',
+                component: () =>import('@component/Home/FontEnd/Ts/interface.vue'),
+                meta:{
+                  textName:'对象类型——接口'
+                }
+              },
+              {
+                path:'/ts-arrayType',
+                component: () =>import('@component/Home/FontEnd/Ts/arrayType.vue'),
+                meta:{
+                  textName:'对象类型——接口'
+                }
+              },
+            ]
+          }
+        ]
       }
     ]
   }
 ]
 const router = VueRouter.createRouter({
-  history:VueRouter.createWebHashHistory(),
+  history: VueRouter.createWebHashHistory(),
   routes
 })
-router.beforeEach((to,from,next) => {
-  if(to.meta.textName){
+router.beforeEach((to, from, next) => {
+  if (to.meta.textName) {
     document.title = to.meta.textName
   }
-  if(to.path != '/login'){
-    if(!sessionStorage['username']){
+  if (to.path != '/login') {
+    if (!sessionStorage['username']) {
       next('/login')
-    }else{
+    } else {
       next()
     }
-  }else{
+  } else {
     next()
   }
 

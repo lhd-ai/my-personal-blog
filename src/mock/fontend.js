@@ -2,7 +2,42 @@ import Mock from "mockjs";
 
 let obj = [
   {
-    name:'ts'
+    name:'Vue3',
+    children:[
+      {
+        name:'组合式API',
+        path:'/vue3-setup'
+      }
+    ]
+  },
+  {
+    name:'ts',
+    children:[
+      {
+        name:'原始数据类型',
+        path:'/ts-originalData'
+      },
+      {
+        name:'任意值',
+        path:'/ts-arbitranily'
+      },
+      {
+        name:'类型推论',
+        path:'/ts-typeInference'
+      },
+      {
+        name:'联合类型',
+        path:'/ts-fedratedType'
+      },
+      {
+        name:'对象的类型——接口',
+        path:'/ts-interface'
+      },
+      {
+        name:'数组的类型',
+        path:'/ts-arrayType'
+      }
+    ]
   }
 ]
 Mock.mock('/fontend', 'get', option => {

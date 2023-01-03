@@ -88,3 +88,16 @@ export default defineConfig({
   }
 })
 ```
+
+#### resolve.alias
+<P>设置路径别名</P>
+
+```
+resolve:{
+  alias:{
+    '@': path.resolve(__dirname,'./src'), // @代替src
+    '@assets':path.resolve(__dirname,'./src/assets'),
+    '@component':path.resolve('./src/components')
+  }
+}
+```

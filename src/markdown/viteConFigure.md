@@ -15,6 +15,7 @@
 ### 配置智能提示
 因为Vite本身附带TypeScript类型，所以你可以通过IDE和jsdoc的配合来实现智能提示:<br/>
 <img src="../assets/vite/vitezhintishi.png"/>
+
 <br/>
 另外你可以使用defineConfig工具函数，这样不用jsdoc注解也可以获取类型提示：<br/>
 <img src="../assets/vite/defineconfig.png"/>
