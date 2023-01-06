@@ -7,7 +7,7 @@
 #### 布尔值
 <p>布尔值是最基础的数据类型，在TypeScript中，使用boolean定义布尔值类型</p>
 
-```
+```JavaScript
 let isDone: bolean = false
 //编译通过
 //后面约定，未强调编译错误的代码片段，默认为编译通过
@@ -19,14 +19,14 @@ let isDone: bolean = false
 
 <img src="@assets/ts/Boolean2.png"/>
 
-```
+```JavaScript
 let createdByNewBoolean:boolean = new Boolean(1)
 // Type 'Boolean' is not assignable to type 'boolean'.
 //   'boolean' is a primitive, but 'Boolean' is a wrapper object. Prefer using 'boolean' when possible.
 ```
 <p>事实上new boolean()返回的是一个Boolean对象,直接调用Boolean也可以返回一个boolean对象</p>
 
-```
+```JavaScript
 let createdByNewBoolean:Boolean = new Boolean(1)
 let createdByNewBoolean:boolean = Boolean(1)
 ```
@@ -35,7 +35,7 @@ let createdByNewBoolean:boolean = Boolean(1)
 #### 数值
 <p>使用number定义数值类型：</p>
 
-```
+```JavaScript
 let decLiteral: number = 6;
 let hexLiteral: number = 0xf00d;
 // ES6 中的二进制表示法
@@ -47,7 +47,7 @@ let infinityNumber: number = Infinity;
 ```
 <p>编译结果为</p>
 
-```
+```JavaScript
 var decLiteral = 6;
 var hexLiteral = 0xf00d;
 // ES6 中的二进制表示法

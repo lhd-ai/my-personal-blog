@@ -28,5 +28,8 @@ export default defineConfig({
       '@component':path.resolve('./src/components')
     }
   },
+  server: {
+    hmr:true
+  },
   base: '/my-personal-blog/'
 })

@@ -6,7 +6,7 @@
 #### [类型 + 方括号]表示法
 <p>最简单的方式是使用[类型 + 方括号]来表示数组</p>
 
-```
+```JavaScript
 let fibonacci: number[] = [1,2,3,4,5]
 ```
 
@@ -19,7 +19,7 @@ let fibonacci: number[] = [1,2,3,'4',5]
 
 <p>数组的一些方法的参数也会根据数组在定义时约定的类型进行限制：</p>
 
-```
+```javascript
 let fibonacci: number[] = [1,2,3,4,5]
 
 fibonacci.push('8')
@@ -31,7 +31,7 @@ fibonacci.push('8')
 #### 数组泛型
 <p>我们也可以使用数组泛型Array<elemType>来表示数组</p>
 
-```
+```javascript
 let fibonacci: Array<number> = [1,2,3,4,5]
 ```
 <p>关于泛型，可以参考 泛型一章</p> 

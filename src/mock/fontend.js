@@ -36,6 +36,50 @@ let obj = [
       {
         name:'数组的类型',
         path:'/ts-arrayType'
+      },
+      {
+        name:'函数的类型',
+        path:'/ts-functionType'
+      },
+      {
+        name:'类型断言',
+        path:'/ts-typeAssertions'
+      },
+      {
+        name:'内置对象',
+        path:'/ts-builtObject'
+      },
+      {
+        name:'类型别名',
+        path:'/ts-typeAlias'
+      },
+      {
+        name:'字符串字面量类型',
+        path:'/ts-stringLiteral'
+      },
+      {
+        name:'元组',
+        path:'/ts-tuples'
+      },
+      {
+        name:'枚举',
+        path:'/ts-enum'
+      },
+      {
+        name:'类',
+        path:'/ts-class'
+      },
+      {
+        name:'类与接口',
+        path:'/ts-classInterface'
+      },
+      {
+        name:'泛型',
+        path:'/ts-generic'
+      },
+      {
+        name:'声明合并',
+        path:'/ts-declarationMerge'
       }
     ]
   }

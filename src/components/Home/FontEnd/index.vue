@@ -1,7 +1,7 @@
 <template>
   <div class="temApp">
     <div class="temSidebar">
-      <el-menu class="menu" router="true" unique-opened=true :default-active="activeIndex" @select="handleSelect" >
+      <el-menu class="menu" router unique-opened :default-active="activeIndex" @select="handleSelect" >
         <template v-for="(item, index) in dataList" :key="index">
           <el-menu-item v-if="!item.children" :index="item.path" :route="item.path">
             <span>{{ item.name }}</span>

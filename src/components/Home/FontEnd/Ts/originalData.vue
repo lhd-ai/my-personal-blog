@@ -46,6 +46,7 @@ export default {
       alert('my name is Tom')
     }
     let unusable: void= undefined
+  
     // let unusableTwo: void = 25//报错类型不对
 
     //测试ts原始数据类型-null/undefined

@@ -221,9 +221,86 @@ const routes = [
                 path:'/ts-arrayType',
                 component: () =>import('@component/Home/FontEnd/Ts/arrayType.vue'),
                 meta:{
-                  textName:'对象类型——接口'
+                  textName:'数组的类型'
                 }
               },
+              {
+                path:'/ts-functionType',
+                component: () => import("@component/Home/FontEnd/Ts/functionType.vue"),
+                meta:{
+                  textName:'函数的类型'
+                }
+              },
+              {
+                path:'//ts-typeAssertions',
+                component: () => import("@component/Home/FontEnd/Ts/typeAssertions.vue"),
+                meta:{
+                  textName:'类型断言'
+                }
+              },
+              {
+                path:'/ts-builtObject',
+                component: () => import("@component/Home/FontEnd/Ts/builtObject.vue"),
+                meta:{
+                  textName:'内置对象'
+                }
+              },
+              {
+                path:'/ts-typeAlias',
+                component: () => import("@component/Home/FontEnd/Ts/typeAlias.vue"),
+                meta:{
+                  textName:'类型别名'
+                }
+              },
+              {
+                path:'/ts-stringLiteral',
+                component: () => import("@component/Home/FontEnd/Ts/stringLiteral.vue"),
+                meta:{
+                  textName:'字符串字面量类型'
+                }
+              },
+              {
+                path:'/ts-tuples',
+                component: () => import("@component/Home/FontEnd/Ts/tuples.vue"),
+                meta:{
+                  textName:'元组'
+                }
+              },
+              {
+                path:'/ts-enum',
+                component: () => import("@component/Home/FontEnd/Ts/enum.vue"),
+                meta:{
+                  textName:'枚举'
+                }
+              },
+              {
+                path:'/ts-generic',
+                component: () => import("@component/Home/FontEnd/Ts/generic.vue"),
+                meta:{
+                  textName:'泛型'
+                }
+              },
+              {
+                path:'/ts-class',
+                component: () => import("@component/Home/FontEnd/Ts/class.vue"),
+                meta:{
+                  textName:'类'
+                }
+              },
+              {
+                path:'/ts-classInterface',
+                component: () => import("@component/Home/FontEnd/Ts/classInterface.vue"),
+                meta:{
+                  textName:'类与接口'
+                }
+              },
+              {
+                path:'/ts-declarationMerge',
+                component: () => import('@component/Home/FontEnd/Ts/declarationMerge.vue'),
+                meta:{
+                  textName:'声明合并'
+                }
+              }
             ]
           }
         ]
