@@ -2,7 +2,7 @@ import Mock from "mockjs"
 
 Mock.mock('/login', 'post', option => {
   const { username, password } = JSON.parse(option.body)
-  if(username === 'lhd' && password === 'woaixuexi666'){
+  if(username === 'lhd' && password === '211314'){
     return {
       name:'lhd',
       code:200,

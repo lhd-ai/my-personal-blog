@@ -31,6 +31,7 @@ ssrBuild 仍是实验性的。它只在构建过程中可用，而不是一个�
 ### 异步配置
 如果配置需要调用一个异步函数，也可以转而导出一个异步函数：<br/>
 <img src="../assets/vite/yibupeizhi.png"/>
+
 ### 环境变量
 环境变量通常可以从process.env获得
 <br/>

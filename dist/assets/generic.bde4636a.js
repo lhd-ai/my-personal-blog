@@ -1,0 +1,38 @@
+import{a1 as r,l as s,z as a,q as n,ab as t,A as o,n as g,F as _,aH as l,a8 as h}from"./index.79668a2f.js";const m="/my-personal-blog/assets/fanxing.2a96e8ab.png",d="/my-personal-blog/assets/fanxingtwo.0ef2bff1.png",f="/my-personal-blog/assets/fanxingthree.04cdf34c.png",y="/my-personal-blog/assets/fanxingyuesu.2cf719bb.png",x="/my-personal-blog/assets/fanxingyuesutwo.2c6f3e91.png",T="/my-personal-blog/assets/fanxingduogecanshuyuesu.2a3fec23.png",b="/my-personal-blog/assets/fanxingjiekou.3456b311.png",v=l('<h3>\u6CDB\u578B</h3><p><a href="http://ts.xcatliu.com/advanced/generics.html">\u6CDB\u578B</a></p><p>\u6CDB\u578B\u662F\u6307\u5728\u5B9A\u4E49\u51FD\u6570\u3001\u63A5\u53E3\u6216\u7C7B\u7684\u65F6\u5019\uFF0C\u4E0D\u9884\u5148\u6307\u5B9A\u5177\u4F53\u7684\u7C7B\u578B\uFF0C\u800C\u5728\u4F7F\u7528\u7684\u65F6\u5019\u518D\u6307\u5B9A\u7C7B\u578B\u7684\u4E00\u79CD\u7279\u6027</p><h4>\u7B80\u5355\u7684\u4F8B\u5B50</h4><p>\u9996\u5148\uFF0C\u6211\u4EEC\u6765\u5B9E\u73B0\u4E00\u4E2A\u51FD\u6570createArray,\u5B83\u53EF\u4EE5\u521B\u5EFA\u4E00\u4E2A\u6307\u5B9A\u957F\u5EA6\u7684\u6570\u7EC4\uFF0C\u540C\u65F6\u5C06\u6BCF\u4E00\u9879\u90FD\u586B\u5145\u4E00\u4E2A\u9ED8\u8BA4\u503C</p><img src="'+m+'"><p>\u4E0A\u4F8B\u4E2D\uFF0C\u6211\u4EEC\u4F7F\u7528\u4E86\u4E4B\u524D\u63D0\u5230\u8FC7\u7684\u6570\u7EC4\u6CDB\u578B\u6765\u5B9A\u4E49\u8FD4\u56DE\u503C\u7684\u7C7B\u578B</p><p>\u8FD9\u6BB5\u4EE3\u7801\u7F16\u8BD1\u4E0D\u4F1A\u62A5\u9519\uFF0C\u4F46\u662F\u4E00\u4E2A\u663E\u800C\u6613\u89C1\u7684\u7F3A\u9677\u662F\uFF0C\u5B83\u5E76\u6CA1\u6709\u51C6\u786E\u7684\u5B9A\u4E49\u8FD4\u56DE\u503C\u7684\u7C7B\u578B</p><p>Array\\&lt;\\any\\&gt;\\\u5141\u8BB8\u6570\u7EC4\u7684\u6BCF\u4E00\u9879\u90FD\u4E3A\u4EFB\u610F\u7C7B\u578B\u3002\u4F46\u6211\u4EEC\u9884\u671F\u7684\u662F\uFF0C\u6570\u7EC4\u7684\u6BCF\u4E00\u9879\u90FD\u5E94\u8BE5\u662F\u8F93\u5165\u7684value\u7684\u7C7B\u578B</p><p>\u8FD9\u65F6\u5019\uFF0C\u6CDB\u578B\u5C31\u6D3E\u4E0A\u7528\u573A\u4E86</p><img src="'+d+'">',11),A=n("p",null,"\u63A5\u7740\u5728\u8C03\u7528\u7684\u65F6\u5019\uFF0C\u53EF\u4EE5\u6307\u5B9A\u5B83\u5177\u4F53\u7684\u7C7B\u578B\u4E3A string\u3002\u5F53\u7136\uFF0C\u4E5F\u53EF\u4EE5\u4E0D\u624B\u52A8\u6307\u5B9A\uFF0C\u800C\u8BA9\u7C7B\u578B\u63A8\u8BBA\u81EA\u52A8\u63A8\u7B97\u51FA\u6765\uFF1A",-1),S=n("pre",null,[n("code",{class:"language-JavaScript","v-pre":"true"},`function createArray<T>(length: number, value: T): Array<T> {
+    let result: T[] = [];
+    for (let i = 0; i < length; i++) {
+        result[i] = value;
+    }
+    return result;
+}
+
+createArray(3, 'x'); // ['x', 'x', 'x']
+`)],-1),w=l('<h4>\u591A\u4E2A\u7C7B\u578B\u53C2\u6570</h4><p>\u5B9A\u4E49\u6CDB\u578B\u7684\u65F6\u5019,\u53EF\u4EE5\u4E00\u6B21\u5B9A\u4E49\u591A\u4E2A\u7C7B\u578B\u53C2\u6570</p><img src="'+f+'"><p>\u4E0A\u4F8B\u4E2D,\u6211\u4EEC\u5B9A\u4E49\u4E86\u4E00\u4E2Aswap\u51FD\u6570,\u7528\u4EA4\u6362\u8F93\u5165\u7684\u5143\u7EC4</p><h4>\u6CDB\u578B\u7EA6\u675F</h4><p>\u5728\u51FD\u6570\u5185\u90E8\u4F7F\u7528\u6CDB\u578B\u53D8\u91CF\u7684\u65F6\u5019,\u7531\u4E8E\u4E8B\u5148\u4E0D\u77E5\u9053\u5B83\u662F\u54EA\u79CD\u7C7B\u578B,\u6240\u4EE5\u4E0D\u80FD\u968F\u610F\u7684\u64CD\u4F5C\u5B83\u7684\u5C5E\u6027\u6216\u65B9\u6CD5</p><img src="'+y+'"><p>\u4E0A\u4F8B\u4E2D,\u6CDB\u578BT\u4E0D\u4E00\u5B9A\u5305\u542B\u5C5E\u6027length,\u6240\u4EE5\u7F16\u8BD1\u7684\u65F6\u5019\u62A5\u9519\u4E86</p><p>\u8FD9\u65F6,\u6211\u4EEC\u53EF\u4EE5\u5BF9\u6CDB\u578B\u8FDB\u884C\u7EA6\u675F,\u53EA\u5141\u8BB8\u8FD9\u4E2A\u51FD\u6570\u4F20\u5165\u90A3\u4E9B\u5305\u542Blength\u5C5E\u6027\u7684\u53D8\u91CF\u8FD9\u5C31\u662F\u6CDB\u578B\u7EA6\u675F</p><img src="'+x+'"><p>\u4E0A\u4F8B\u4E2D,\u6211\u4EEC\u4F7F\u7528\u4E86extends\u7EA6\u675F\u4E86\u6CDB\u578BT\u5FC5\u987B\u7B26\u5408\u63A5\u53E3Lengthwise\u7684\u5F62\u72B6,\u4E5F\u5C31\u662F\u5FC5\u987B\u5305\u542Blength\u5C5E\u6027</p><p>\u6B64\u65F6\u5982\u679C\u8C03\u7528genericConstraints\u7684\u65F6\u5019,\u4F20\u5165\u7684arg\u4E0D\u5305\u542Blength,\u90A3\u4E48\u5728\u7F16\u8BD1\u9636\u6BB5\u5C31\u4F1A\u62A5\u9519</p><h4>\u591A\u4E2A\u7C7B\u578B\u53C2\u6570\u4E4B\u95F4\u4E5F\u53EF\u4EE5\u4E92\u76F8\u7EA6\u675F</h4><img src="'+T+'"><p>\u4E0A\u4F8B\u4E2D,\u6211\u4EEC\u4F7F\u7528\u4E86\u4E24\u4E2A\u7C7B\u578B\u53C2\u6570,\u5176\u4E2D\u8981\u6C42T\u7EE7\u627FU,\u8FD9\u6837\u5C31\u4FDD\u8BC1\u4E86U\u4E0A\u4E0D\u4F1A\u51FA\u73B0T\u4E2D\u4E0D\u5B58\u5728\u7684\u5B57\u6BB5</p><h4>\u6CDB\u578B\u63A5\u53E3</h4><p>\u4E4B\u524D\u5B66\u4E60\u8FC7,\u53EF\u4EE5\u4F7F\u7528\u63A5\u53E3\u7684\u65B9\u5F0F\u6765\u5B9A\u4E49\u4E00\u4E2A\u51FD\u6570\u9700\u8981\u7B26\u5408\u7684\u5F62\u72B6</p>',17),C=n("pre",null,[n("code",{class:"language-JavaScript","v-pre":"true"},`interface SearchFunc {
+  (source: string,subString: string): boolean
+}
+let mySearch: SearchFunc
+mySearch = function(source: string, subString: string) {
+    return source.search(subString) !== -1;
+}
+`)],-1),k=n("p",null,"\u5F53\u7136\u4E5F\u53EF\u4EE5\u4F7F\u7528\u542B\u6709\u6CDB\u578B\u7684\u63A5\u53E3\u6765\u5B9A\u4E49\u51FD\u6570\u7684\u5F62\u72B6",-1),F=n("pre",null,[n("code",{class:"language-JavaScript","v-pre":"true"},`interface CreateArrayFunc {
+    <T>(length: number, value: T): Array<T>;
+}
+
+let createArray: CreateArrayFunc;
+createArray = function<T>(length: number, value: T): Array<T> {
+    let result: T[] = [];
+    for (let i = 0; i < length; i++) {
+        result[i] = value;
+    }
+    return result;
+}
+
+createArray(3, 'x'); // ['x', 'x', 'x']
+`)],-1),V=n("p",null,"\u8FDB\u4E00\u6B65,\u6211\u4EEC\u53EF\u4EE5\u628A\u6CDB\u578B\u53C2\u6570\u63D0\u53D6\u5230\u63A5\u53E3\u540D\u4E0A",-1),D=n("img",{src:b},null,-1),J=n("p",null,[n("b",null,"\u6CE8\u610F,\u6B64\u65F6\u5728\u4F7F\u7528\u6CDB\u578B\u63A5\u53E3\u7684\u65F6\u5019,\u9700\u8981\u5B9A\u4E49\u6CDB\u578B\u7684\u7C7B\u578B")],-1),N=n("h4",null,"\u6CDB\u578B\u7C7B",-1),$=n("p",null,"\u6682\u5B9A",-1),B=n("h4",null,"\u6CDB\u578B\u53C2\u6570\u7684\u9ED8\u8BA4\u7C7B\u578B",-1),M=n("p",null,"\u5728ts2.3\u4E4B\u540E,\u6211\u4EEC\u53EF\u4EE5\u4E3A\u6CDB\u578B\u4E2D\u7684\u7C7B\u578B\u53C2\u6570\u6307\u5B9A\u9ED8\u8BA4\u7C7B\u578B.\u5F53\u4F7F\u7528\u6CDB\u578B\u65F6\u6CA1\u6709\u5728\u4EE3\u7801\u4E2D\u76F4\u63A5\u6307\u5B9A\u7C7B\u578B\u53C2\u6570,\u4ECE\u5B9E\u9645\u503C\u53C2\u6570\u4E2D\u4E5F\u65E0\u6CD5\u63A8\u6D4B\u51FA\u65F6,\u8FD9\u4E2A\u9ED8\u8BA4\u7C7B\u578B\u5C31\u4F1A\u8D77\u4F5C\u7528",-1),E=n("pre",null,[n("code",{class:"language-JavaScript","v-pre":"true"},`function createArray<T = string>(length: number, value: T): Array<T> {
+    let result: T[] = [];
+    for (let i = 0; i < length; i++) {
+        result[i] = value;
+    }
+    return result;
+}
+`)],-1);function U(p,u){const e=r("t");return s(),a(_,null,[v,n("p",null,[t("\u4E0A\u4F8B\u4E2D\uFF0C\u6211\u4EEC\u5728\u51FD\u6570\u540D\u540E\u6DFB\u52A0\u4E86\u300AT\u300B\u5176\u4E2DT\u7528\u6765\u6307\u4EE3\u4EFB\u610F\u8F93\u5165\u7684\u7C7B\u578B\uFF0C\u5728\u540E\u9762\u7684\u8F93\u5165value: T\u548C\u8F93\u51FAArray"),o(e,null,{default:g(()=>[t("\u4E2D\u5373\u53EF\u4F7F\u7528\u4E86")]),_:1})]),A,S,w,C,k,F,V,D,J,N,$,B,M,E],64)}const c={render:U};c.__hmrId="D:/lhdtext/vue3/my-personal-blog/src/markdown/FontEnd/Ts/generic.md";const j={components:{MarkDownComponent:c},setup(){}};function q(p,u,e,z,H,I){const i=r("MarkDownComponent");return s(),a("article",null,[o(i)])}const R=h(j,[["render",q]]);export{R as default};

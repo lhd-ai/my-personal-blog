@@ -3,7 +3,7 @@ import Login from './components/Login.vue'
 const routes = [
   {
     path: '/:pathMatch(.*)*',
-    redirect: '/login'
+    component: Login
   },
   {
     path: '/login',
@@ -24,7 +24,7 @@ const routes = [
             path: '',
             component: () => import('./components/Home/Technology/markdown.vue'),
             meta: {
-              textName: '技术'
+              textName: 'markdown'
             },
           }
         ]
@@ -33,7 +33,7 @@ const routes = [
         path: '/technology',
         component: () => import('./components/Home/Technology/index.vue'),
         meta: {
-          textName: '技术'
+          textName: 'markdown'
         },
         children: [
           {
@@ -64,7 +64,7 @@ const routes = [
             path: '',
             component: () => import('./components/Home/BuildTools/webpack.vue'),
             meta: {
-              textName: '构建工具'
+              textName: 'webpack'
             },
           },
           {
@@ -162,26 +162,147 @@ const routes = [
         children: [
           {
             path: '',
-            component: () => import('./components/Home/FontEnd/vue3/setup.vue'),
+            component: () => import('./components/Home/FontEnd/vue3/Start/briefIntroduction.vue'),
             meta: {
-              textName: '组合式API'
+              textName: '简介'
             }
           },
           {
-            path:'/vue3',
-            children:[
+            path: '/vue3',
+            children: [
               {
-                path: '/vue3-setup',
-                component: () => import('./components/Home/FontEnd/vue3/setup.vue'),
+                path: '/vue-briefIntroduction',
+                component: () => import('./components/Home/FontEnd/vue3/Start/briefIntroduction.vue'),
+                meta: {
+                  textName: '简介'
+                }
+              },
+              {
+                path: '/vue-getStartedQuickly',
+                component: () => import('@component/Home/FontEnd/vue3/start/getStartedQuickly.vue'),
+                meta: {
+                  textName: '快速开始'
+                }
+              },
+              {
+                path: '/vue3-setupStart',
+                component: () => import('./components/Home/FontEnd/vue3/Combined/setup.vue'),
                 meta: {
                   textName: '组合式API'
                 }
               },
+              {
+                path: '/vue3-setup',
+                component: () => import('@component/Home/FontEnd/vue3/Combined/setupTwo.vue'),
+                meta: {
+                  textName: 'setup()'
+                }
+              },
+              {
+                path: '/vue3-core',
+                component: () => import('@component/Home/FontEnd/vue3/Combined/setupCore.vue'),
+                meta: {
+                  textName: '响应式核心'
+                }
+              },
+              {
+                path: '/vue3-tool',
+                component: () => import('@component/Home/FontEnd/vue3/Combined/setupTool.vue'),
+                meta: {
+                  textName: '响应式工具'
+                }
+              },
+              //将组件与路由映射起来（1）
+              {
+                path:'/vue3-routerInstallation',
+                component: () => import("@component/Home/FontEnd/vue3/Router/inStallation.vue"),
+                meta: {
+                  textName: '路由安装'
+                }
+              },
+              {
+                path: '/vue3-routerGetStart',
+                component: () => import("@component/Home/FontEnd/vue3/Router/getStart.vue"),
+                meta: {
+                  textName:'入门'
+                }
+              },
+              {
+                path: '/vue3-dynRoutering/:id',
+                component: () => import("@component/Home/FontEnd/vue3/Router/dynRoutering.vue"),
+                meta: {
+                  textName: '动态路由'
+                }
+              },
+              {
+                path: '/vue3-routerMatch',
+                component: () => import("@component/Home/FontEnd/vue3/Router/routerMatch.vue"),
+                meta: {
+                  textName: '路由的匹配语法'
+                }
+              },
+              {
+                path: '/vue3-routerNested',
+                component: () => import("@component/Home/FontEnd/vue3/Router/routerNested.vue"),
+                meta: {
+                  textName: '路由嵌套'
+                }
+              },
+              {
+                path: '/vue3-gorNav',
+                component: () => import("@component/Home/FontEnd/vue3/Router/gorNav.vue"),
+                meta: {
+                  textName: '编程式导航'
+                }
+              },
+              {
+                path: '/vue3-nameRouter',
+                component: () => import("@component/Home/FontEnd/vue3/Router/nameRouter.vue"),
+                meta: {
+                  textName: '命名路由'
+                }
+              },
+              {
+                path: '/vue3-nameView',
+                component: () => import("@component/Home/FontEnd/vue3/Router/nameView.vue"),
+                meta: {
+                  textName: '命名视图'
+                }
+              },
+              {
+                path: '/vue3-redirect',
+                component: () => import("@component/Home/FontEnd/vue3/Router/redirect.vue"),
+                meta: {
+                  textName: '重定向和别名'
+                }
+              },
+              {
+                path: '/vue3-rotrerParameter',
+                component: () => import("@component/Home/FontEnd/vue3/Router/routerParameter.vue"),
+                meta: {
+                  textName: '路由组件传参'
+                }
+              },
+              {
+                path: '/vue3-historyMode',
+                component: () => import("@component/Home/FontEnd/vue3/Router/historyMode.vue"),
+                meta: {
+                  textName: '不同的历史纪录模式'
+                }
+              },
+              {
+                path: '/vue3-lazyLoading',
+                component: () => import("@component/Home/FontEnd/vue3/Router/lazyLoading.vue"),
+                meta: {
+                  textName: '路由懒加载'
+                }
+              },
+
             ]
           },
           {
-            path:'/ts',
-            children:[
+            path: '/ts',
+            children: [
               {
                 path: '/ts-originalData',
                 component: () => import('./components/Home/FontEnd/Ts/originalData.vue'),
@@ -190,115 +311,127 @@ const routes = [
                 }
               },
               {
-                path:'/ts-arbitranily',
+                path: '/ts-arbitranily',
                 component: () => import('@component/Home/FontEnd/Ts/arbitrarily.vue'),
                 meta: {
                   textName: '任意值'
                 }
               },
               {
-                path:'/ts-typeInference',
+                path: '/ts-typeInference',
                 component: () => import('@component/Home/FontEnd/Ts/typeInference.vue'),
-                meta:{
-                  textName:'类型推论'
+                meta: {
+                  textName: '类型推论'
                 }
               },
               {
-                path:"/ts-fedratedType",
+                path: "/ts-fedratedType",
                 component: () => import('@component/Home/Fontend/Ts/federatedType.vue'),
-                meta:{
-                  textName:'联合类型'
+                meta: {
+                  textName: '联合类型'
                 }
               },
               {
-                path:'/ts-interface',
-                component: () =>import('@component/Home/FontEnd/Ts/interface.vue'),
-                meta:{
-                  textName:'对象类型——接口'
+                path: '/ts-interface',
+                component: () => import('@component/Home/FontEnd/Ts/interface.vue'),
+                meta: {
+                  textName: '对象类型——接口'
                 }
               },
               {
-                path:'/ts-arrayType',
-                component: () =>import('@component/Home/FontEnd/Ts/arrayType.vue'),
-                meta:{
-                  textName:'数组的类型'
+                path: '/ts-arrayType',
+                component: () => import('@component/Home/FontEnd/Ts/arrayType.vue'),
+                meta: {
+                  textName: '数组的类型'
                 }
               },
               {
-                path:'/ts-functionType',
+                path: '/ts-functionType',
                 component: () => import("@component/Home/FontEnd/Ts/functionType.vue"),
-                meta:{
-                  textName:'函数的类型'
+                meta: {
+                  textName: '函数的类型'
                 }
               },
               {
-                path:'//ts-typeAssertions',
+                path: '/ts-typeAssertions',
                 component: () => import("@component/Home/FontEnd/Ts/typeAssertions.vue"),
-                meta:{
-                  textName:'类型断言'
+                meta: {
+                  textName: '类型断言'
                 }
               },
               {
-                path:'/ts-builtObject',
+                path: '/ts-builtObject',
                 component: () => import("@component/Home/FontEnd/Ts/builtObject.vue"),
-                meta:{
-                  textName:'内置对象'
+                meta: {
+                  textName: '内置对象'
                 }
               },
               {
-                path:'/ts-typeAlias',
+                path: '/ts-typeAlias',
                 component: () => import("@component/Home/FontEnd/Ts/typeAlias.vue"),
-                meta:{
-                  textName:'类型别名'
+                meta: {
+                  textName: '类型别名'
                 }
               },
               {
-                path:'/ts-stringLiteral',
+                path: '/ts-stringLiteral',
                 component: () => import("@component/Home/FontEnd/Ts/stringLiteral.vue"),
-                meta:{
-                  textName:'字符串字面量类型'
+                meta: {
+                  textName: '字符串字面量类型'
                 }
               },
               {
-                path:'/ts-tuples',
+                path: '/ts-tuples',
                 component: () => import("@component/Home/FontEnd/Ts/tuples.vue"),
-                meta:{
-                  textName:'元组'
+                meta: {
+                  textName: '元组'
                 }
               },
               {
-                path:'/ts-enum',
+                path: '/ts-enum',
                 component: () => import("@component/Home/FontEnd/Ts/enum.vue"),
-                meta:{
-                  textName:'枚举'
+                meta: {
+                  textName: '枚举'
                 }
               },
               {
-                path:'/ts-generic',
+                path: '/ts-generic',
                 component: () => import("@component/Home/FontEnd/Ts/generic.vue"),
-                meta:{
-                  textName:'泛型'
+                meta: {
+                  textName: '泛型'
                 }
               },
               {
-                path:'/ts-class',
+                path: '/ts-class',
                 component: () => import("@component/Home/FontEnd/Ts/class.vue"),
-                meta:{
-                  textName:'类'
+                meta: {
+                  textName: '类'
                 }
               },
               {
-                path:'/ts-classInterface',
+                path: '/ts-classInterface',
                 component: () => import("@component/Home/FontEnd/Ts/classInterface.vue"),
-                meta:{
-                  textName:'类与接口'
+                meta: {
+                  textName: '类与接口'
                 }
               },
               {
-                path:'/ts-declarationMerge',
+                path: '/ts-declarationMerge',
                 component: () => import('@component/Home/FontEnd/Ts/declarationMerge.vue'),
-                meta:{
-                  textName:'声明合并'
+                meta: {
+                  textName: '声明合并'
+                }
+              }
+            ]
+          },
+          {
+            path:'/js',
+            children:[
+              {
+                path:"/js-proxy",
+                component: () => import('@component/Home/FontEnd/Js/proxy.vue'),
+                meta: {
+                  textName:'proxy'
                 }
               }
             ]
@@ -323,6 +456,7 @@ router.beforeEach((to, from, next) => {
       next()
     }
   } else {
+    sessionStorage.clear()
     next()
   }
 

@@ -14,8 +14,7 @@
 </template>
 
 <script>
-import request from '../../../request';
-import { toRaw } from 'vue';
+import request from '../../../request'
 export default {
   data() {
     return {
@@ -46,7 +45,7 @@ export default {
         url: '/technology',
         method: 'get',
         data: {
-          username: toRaw(this.username)
+          username: this.username
         }
       })
         .then(res => {

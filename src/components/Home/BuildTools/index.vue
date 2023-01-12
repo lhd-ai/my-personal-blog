@@ -39,7 +39,6 @@ export default {
   },
   created() {
     this.getDataList()
-    console.log(sessionStorage.getItem('keyPathTwo'))
     this.activeIndex = sessionStorage.getItem('keyPathTwo') || '/webpack';
   },
   watch: {

@@ -17,9 +17,6 @@
     <el-dropdown>
       <span class="el-dropdown-link">
         {{ username }}.blog
-        <el-icon class="el-icon--right">
-          <arrow-down />
-        </el-icon>
       </span>
       <template #dropdown>
         <el-dropdown-menu>
@@ -33,7 +30,6 @@
 
 <script>
 import request from '../../request';
-import { toRaw } from 'vue';
 export default {
   data() {
     return {
@@ -55,7 +51,7 @@ export default {
         url: '/home',
         method: 'get',
         data: {
-          username: toRaw(this.username)
+          username: this.username
         }
       })
         .then(res => {

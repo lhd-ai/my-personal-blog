@@ -17,13 +17,15 @@
 <script>
 import request from '../request'
 import { ElMessage } from 'element-plus'
-import { toRaw } from 'vue'
 export default {
   data() {
     return {
-      username: 'lhd',
-      password: 'woaixuexi666'
+      username: '',
+      password: ''
     }
+  },
+  created(){
+
   },
   methods: {
     signIn() {
@@ -31,8 +33,8 @@ export default {
         url: '/login',
         method: 'post',
         data: {
-          username:toRaw(this.username),
-          password:toRaw(this.password)
+          username:this.username,
+          password:this.password
         }
       })
         .then(res => {
@@ -48,6 +50,7 @@ export default {
           }else{
             sessionStorage['username'] = res.data.name
             this.$router.replace('/home')
+            
             ElMessage({
               showClose: true,
               message: res.data.msg,
