@@ -291,6 +291,13 @@ const routes = [
                 }
               },
               {
+                path: '/vue3-routerGuard',
+                component: () => import("@component/Home/FontEnd/vue3/Router/routerGuard.vue"),
+                meta: {
+                  textName: '导航守卫'
+                }
+              },
+              {
                 path: '/vue3-lazyLoading',
                 component: () => import("@component/Home/FontEnd/vue3/Router/lazyLoading.vue"),
                 meta: {

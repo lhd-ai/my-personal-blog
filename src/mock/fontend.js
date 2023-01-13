@@ -86,6 +86,10 @@ let obj = [
             path: '/vue3-historyMode'
           },
           {
+            name: '导航守卫',
+            path: '/vue3-routerGuard'
+          },
+          {
             name:'路由懒加载',
             path: '/vue3-lazyLoading'
           }
