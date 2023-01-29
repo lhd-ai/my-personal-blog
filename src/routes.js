@@ -185,6 +185,20 @@ const routes = [
                 }
               },
               {
+                path: '/vue-compouted',
+                component: () => import('./components/Home/FontEnd/vue3/start/computed.vue'),
+                meta: {
+                  textName:'计算属性'
+                }
+              },
+              {
+                path: '/vue-watch',
+                component: () => import('./components/Home/FontEnd/vue3/start/watch.vue'),
+                meta: {
+                  textName:'监听器'
+                }
+              },
+              {
                 path: '/vue3-setupStart',
                 component: () => import('./components/Home/FontEnd/vue3/Combined/setup.vue'),
                 meta: {
@@ -304,7 +318,49 @@ const routes = [
                   textName: '路由懒加载'
                 }
               },
-
+              {
+                path: '/pinia-introduce',
+                component: () => import("@component/Home/FontEnd/vue3/Pinia/introduce.vue"),
+                meta: {
+                  textName: 'pinia介绍'
+                }
+              },
+              {
+                path: '/pinia-start',
+                component: () => import("@component/Home/FontEnd/vue3/Pinia/start.vue"),
+                meta: {
+                  textName: 'pinia开始'
+                }
+              },
+              {
+                path: '/pinia-store',
+                component: () => import("@component/Home/FontEnd/vue3/Pinia/store.vue"),
+                meta: {
+                  textName: '定义Store'
+                }
+              },
+              {
+                path: '/pinia-state',
+                component: () => import("@component/Home/FontEnd/vue3/Pinia/state.vue"),
+                meta: {
+                  textName: 'State'
+                }
+              },
+              {
+                path: '/pinia-getter',
+                component: () => import("@component/Home/FontEnd/vue3/Pinia/getter.vue"),
+                meta: {
+                  textName: 'Getter'
+                }
+              },
+              {
+                path: '/pinia-action',
+                component: () => import("@component/Home/FontEnd/vue3/Pinia/action.vue"),
+                meta: {
+                  textName: 'Action'
+                }
+              },
+              
             ]
           },
           {

@@ -12,6 +12,10 @@ let dataList = [
   {
     name:'技术',
     path:'/technology'
+  },
+  {
+    name:'面试',
+    path:'/fontend'
   }
 ]
 

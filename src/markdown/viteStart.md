@@ -32,7 +32,7 @@ npm create vite@latest my-vue-app --template vue
 # npm 7+, extra double-dash is needed:
 npm create vite@latest my-vue-app -- --template vue
 <br/>
-npm init vite@/latesr my-vue-app -- --template
+npm init vite@/latest my-vue-app -- --template vue
 
 <p>vue官网提供的是使用：</p>
 <p>npm init vue@latest</p>

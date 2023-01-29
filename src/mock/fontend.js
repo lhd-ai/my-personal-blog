@@ -14,6 +14,14 @@ let obj = [
           {
             name: '快速上手',
             path: '/vue-getStartedQuickly'
+          },
+          {
+            name: '计算属性',
+            path: '/vue-compouted'
+          },
+          {
+            name: '监听器',
+            path: '/vue-watch'
           }
         ]
       },
@@ -92,6 +100,35 @@ let obj = [
           {
             name:'路由懒加载',
             path: '/vue3-lazyLoading'
+          }
+        ]
+      },
+      {
+        name:'Pinia',
+        grandson: [
+          {
+            name:'介绍',
+            path: '/pinia-introduce'
+          },
+          {
+            name: '开始',
+            path: '/pinia-start'
+          },
+          {
+            name:'定义Store',
+            path: '/pinia-store'
+          },
+          {
+            name:'State',
+            path: '/pinia-state'
+          },
+          {
+            name: 'Getter',
+            path: '/pinia-getter'
+          },
+          {
+            name: 'Action',
+            path: '/pinia-action'
           }
         ]
       }
