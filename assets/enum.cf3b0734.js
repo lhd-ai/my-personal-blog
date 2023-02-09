@@ -1,0 +1,54 @@
+import{l as s,z as o,F as c,q as n,aH as u,a8 as i,a1 as r,A as p}from"./index.482f4cb1.js";const _="/my-personal-blog/assets/meiju.56d66e6d.png",d="/my-personal-blog/assets/meijutwo.30262a51.png",h="/my-personal-blog/assets/meijuthree.a83a6d63.png",D="/my-personal-blog/assets/meijufour.824a0e39.png",y="/my-personal-blog/assets/mneijufive.49f1c45d.png",g="/my-personal-blog/assets/meijujisuan.52289a4a.png",m="/my-personal-blog/assets/changshumeiju.318cf685.png",T="/my-personal-blog/assets/waibumeiju.592d9deb.png",S=n("h3",null,"\u679A\u4E3E",-1),v=n("p",null,[n("a",{href:"http://ts.xcatliu.com/advanced/enum.html"},"\u679A\u4E3E")],-1),w=n("p",null,"\u679A\u4E3E\u7C7B\u578B\u7528\u4E8E\u53D6\u503C\u88AB\u9650\u5B9A\u5728\u4E00\u5B9A\u8303\u56F4\u5185\u7684\u573A\u666F\uFF0C\u6BD4\u5982\u4E00\u5468\u53EA\u80FD\u6709\u4E03\u5929\uFF0C\u989C\u8272\u9650\u5B9A\u4E3A\u7EA2\u7EFF\u84DD\u7B49",-1),b=n("h4",null,"\u7B80\u5355\u7684\u4F8B\u5B50",-1),f=n("p",null,"\u679A\u4E3E\u4F7F\u7528enum\u5173\u952E\u5B57\u6765\u5B9A\u4E49",-1),M=n("pre",null,[n("code",{class:"language-JavaScript","v-pre":"true"},`enum Days {Sun,Mon,Tue,Web,Thu,Fri,Sat}
+console.log(Days)
+`)],-1),F=n("img",{src:_},null,-1),k=n("p",null,"\u679A\u4E3E\u6210\u5458\u4F1A\u88AB\u8D4B\u503C\u4ECE0\u5F00\u59CB\u9012\u589E\u7684\u6570\u5B57\uFF0C\u540C\u65F6\u4E5F\u4F1A\u5BF9\u679A\u4E3E\u503C\u5230\u679A\u4E3E\u540D\u8FDB\u884C\u53CD\u5411\u6620\u5C04\uFF1A",-1),j=n("img",{src:d},null,-1),W=n("img",{src:h},null,-1),J=n("p",null,"\u4E8B\u5B9E\u4E0A\uFF0C\u4E0A\u9762\u7684\u4F8B\u5B50\u4F1A\u88AB\u7F16\u8BD1\u4E3A",-1),R=n("pre",null,[n("code",{class:"language-JavaScript","v-pre":"true"},`var Days
+(function(Days){
+   Days[Days["Sun"] = 0] = "Sun";
+    Days[Days["Mon"] = 1] = "Mon";
+    Days[Days["Tue"] = 2] = "Tue";
+    Days[Days["Wed"] = 3] = "Wed";
+    Days[Days["Thu"] = 4] = "Thu";
+    Days[Days["Fri"] = 5] = "Fri";
+    Days[Days["Sat"] = 6] = "Sat";
+})(Days || (Days = {}))
+`)],-1),x=n("h4",null,"\u624B\u52A8\u8D4B\u503C",-1),C=n("p",null,"\u6211\u4EEC\u4E5F\u53EF\u4EE5\u7ED9\u679A\u4E3E\u624B\u52A8\u8D4B\u503C",-1),q=n("pre",null,[n("code",{class:"language-JavaScript","v-pre":"true"},`enum Days {Sun=7,Mon = 1,Tue,Web,Thu,Fri,Sat}
+
+console.log(Days["Sun"] === 7); // true
+console.log(Days["Mon"] === 1); // true
+console.log(Days["Tue"] === 2); // true
+console.log(Days["Sat"] === 6); // true
+`)],-1),L=n("p",null,"\u4E0A\u9762\u7684\u4F8B\u5B50\u4E2D\uFF0C\u672A\u624B\u52A8\u8D4B\u503C\u7684\u679A\u4E3E\u578B\u4F1A\u63A5\u7740\u4E0A\u4E00\u4E2A\u679A\u4E3E\u9879\u9012\u589E",-1),N=n("p",null,"\u5982\u679C\u672A\u624B\u52A8\u8D4B\u503C\u7684\u679A\u4E3E\u578B\u4E0E\u624B\u52A8\u8D4B\u503C\u7684\u91CD\u590D\u4E86\uFF0Cts\u662F\u4E0D\u4F1A\u5BDF\u89C9\u5230\u8FD9\u4E00\u70B9\u7684",-1),U=n("img",{src:D},null,-1),B=n("p",null,`\u4E0A\u9762\u7684\u4F8B\u5B50\u4E2D\uFF0C\u9012\u589E\u52303\u7684\u65F6\u5019\u4E0E\u524D\u9762\u7684Sun\u7684\u53D6\u503C\u91CD\u590D\u4E86\uFF0C\u4F46\u662Fts\u5E76\u6CA1\u6709\u62A5\u9519\uFF0C\u5BFC\u81F4DayTwo[3]\u7684\u503C\u5148\u662F'Sun'\uFF0C\u800C\u540E\u53C8\u88AB"Web"\u8986\u76D6\u4E86\u3002\u7F16\u8BD1\u7684\u7ED3\u679C\u662F\uFF1A`,-1),V=n("pre",null,[n("code",{class:"language-JavaScript","v-pre":"true"},`var DaysTwo;
+(function (DaysTwo) {
+    DaysTwo[DaysTwo["Sun"] = 3] = "Sun";
+    DaysTwo[DaysTwo["Mon"] = 1] = "Mon";
+    DaysTwo[DaysTwo["Tue"] = 2] = "Tue";
+    DaysTwo[DaysTwo["Wed"] = 3] = "Wed";
+    DaysTwo[DaysTwo["Thu"] = 4] = "Thu";
+    DaysTwo[DaysTwo["Fri"] = 5] = "Fri";
+    DaysTwo[DaysTwo["Sat"] = 6] = "Sat";
+})(DaysTwo || (DaysTwo = {}));
+`)],-1),$=n("p",null,"\u6240\u4EE5\u4F7F\u7528\u7684\u65F6\u5019\u9700\u8981\u6CE8\u610F\uFF0C\u6700\u597D\u4E0D\u8981\u51FA\u73B0\u8FD9\u79CD\u8986\u76D6\u7684\u60C5\u51B5",-1),E=n("p",null,"\u624B\u52A8\u8D4B\u503C\u7684\u679A\u4E3E\u578B\u53EF\u4EE5\u4E0D\u662F\u6570\u5B57\uFF0C\u6B64\u65F6\u9700\u8981\u4F7F\u7528\u7C7B\u578B\u65AD\u8A00\u6765\u8BA9tsc\u65E0\u89C6\u7C7B\u578B\u68C0\u67E5\uFF08\u7F16\u8BD1\u51FA\u6765\u7684js\u4ECD\u7136\u662F\u53EF\u7528\u7684\uFF09",-1),z=n("pre",null,[n("code",{class:"language-JavaScript","v-pre":"true"},`enum Days {Sun = 7, Mon, Tue, Web, Thu, Fri, Sat = "s" as any}
+
+var Days;
+(function (Days) {
+    Days[Days["Sun"] = 7] = "Sun";
+    Days[Days["Mon"] = 8] = "Mon";
+    Days[Days["Tue"] = 9] = "Tue";
+    Days[Days["Wed"] = 10] = "Wed";
+    Days[Days["Thu"] = 11] = "Thu";
+    Days[Days["Fri"] = 12] = "Fri";
+    Days[Days["Sat"] = "S"] = "Sat";
+})(Days || (Days = {}));
+`)],-1),I=n("p",null,"\u5F53\u7136\u624B\u52A8\u8D4B\u503C\u7684\u679A\u4E3E\u578B\u4E5F\u53EF\u4EE5\u4E3A\u5C0F\u6570\u6216\u8005\u8D1F\u6570\uFF0C\u6B64\u65F6\u540E\u7EED\u672A\u624B\u52A8\u8D4B\u503C\u7684\u9879\u7684\u9012\u589E\u6B65\u957F\u4ECD\u672A1",-1),A=n("img",{src:y},null,-1),G=n("h4",null,"\u5E38\u6570\u9879\u548C\u8BA1\u7B97\u6240\u5F97\u9879",-1),H=n("p",null,"\u679A\u4E3E\u6709\u4E24\u79CD\u7C7B\u578B\uFF1A\u5E38\u6570\u9879\u548C\u8BA1\u7B97\u6240\u5F97\u9879",-1),K=n("p",null,"\u524D\u9762\u6211\u4EEC\u6240\u4E3E\u7684\u4F8B\u5B50\u90FD\u662F\u5E38\u6570\u9879\uFF0C\u4E00\u4E2A\u5178\u578B\u7684\u8BA1\u7B97\u6240\u5F97\u9879\u7684\u4F8B\u5B50\uFF1A",-1),O=n("pre",null,[n("code",{class:"language-JavaScript","v-pre":"true"},`enum Color {Red, Green, Blue = "bule".length}
+`)],-1),P=u('<p>\u4E0A\u9762\u7684\u4F8B\u5B50\u4E2D\uFF0C&quot;blue&quot;.length\u5C31\u662F\u4E00\u4E2A\u8BA1\u7B97\u6240\u5F97\u9879</p><p>\u4E0A\u9762\u7684\u4F8B\u5B50\u4E0D\u4F1A\u62A5\u9519\uFF0C\u4F46\u662F\u5982\u679C<b>\u7D27\u63A5\u5728\u8BA1\u7B97\u6240\u5F97\u9879\u540E\u9762\u7684\u662F\u672A\u624B\u52A8\u8D4B\u503C\u7684\u9879\uFF0C\u90A3\u4E48\u5B83\u5C31\u548C\u65E0\u6CD5\u83B7\u5F97\u521D\u59CB\u503C\u800C\u62A5\u9519</b></p><img src="'+g+'"><p>\u4E0B\u9762\u662F\u5E38\u6570\u9879\u548C\u8BA1\u7B97\u6240\u5F97\u9879\u7684\u5B8C\u6574\u5B9A\u4E49\uFF0C\u90E8\u5206\u5F15\u7528\u5B50</p><p><a href="https://zhongsp.gitbooks.io/typescript-handbook/content/doc/handbook/Enums.html">\u4E2D\u6587\u624B\u518C\u2014\u2014\u679A\u4E3E</a></p><p>\u5F53\u6EE1\u8DB3\u4EE5\u4E0B\u6761\u4EF6\u65F6\uFF0C\u679A\u4E3E\u6210\u5458\u88AB\u5F53\u4F5C\u662F\u5E38\u6570\uFF1A</p><ol><li>\u4E0D\u5177\u6709\u521D\u59CB\u5316\u51FD\u6570\u5E76\u4E14\u4E4B\u524D\u7684\u679A\u4E3E\u6210\u5458\u662F\u5E38\u6570\u3002\u5728\u8FD9\u79CD\u60C5\u51B5\u4E0B\uFF0C\u5F53\u524D\u679A\u4E3E\u6210\u5458\u7684\u503C\u672A\u4E0A\u4E00\u4E2A\u679A\u4E3E\u6210\u5458\u7684\u503C\u52A01.\u4F46\u7B2C\u4E00\u4E2A\u679A\u4E3E\u5143\u7D20\u662F\u4E2A\u4F8B\u5916\uFF0C\u5982\u679C\u5B83\u6CA1\u6709\u521D\u59CB\u5316\u65B9\u6CD5\uFF0C\u90A3\u4E48\u5B83\u7684\u521D\u59CB\u503C\u4E3A0</li><li>\u679A\u4E3E\u6210\u5458\u4F7F\u7528\u5E38\u6570\u679A\u4E3E\u8868\u8FBE\u5F0F\u521D\u59CB\u5316\u3002\u9610\u8FF0\u679A\u4E3E\u8868\u8FBE\u5F0F\u662Fts\u8868\u8FBE\u5F0F\u7684\u81EA\u5DF1\uFF0C\u5B83\u53EF\u4EE5\u5728\u7F16\u8BD1\u9636\u6BB5\u6C42\u503C\uFF0C\u5F53\u4E00\u4E2A\u8868\u8FBE\u5F0F\u6EE1\u8DB3\u4E0B\u9762\u6761\u4EF6\u4E4B\u4E00\u65F6\uFF0C\u5B83\u5C31\u662F\u4E00\u4E2A\u5E38\u6570\u679A\u4E3E\u8868\u8FBE\u5F0F <blockquote><p>\u6570\u5B57\u5B57\u9762\u91CF \u5F15\u7528\u4E4B\u524D\u5B9A\u4E49\u7684\u5E38\u6570\u679A\u4E3E\u6210\u5458(\u53EF\u4EE5\u662F\u5728\u4E0D\u540C\u7684\u679A\u4E3E\u7C7B\u578B\u4E2D\u5B9A\u4E49\u7684)\u5982\u679C\u8FD9\u4E2A\u6210\u5458\u662F\u5728\u540C\u4E00\u4E2A\u679A\u4E3E\u7C7B\u578B\u4E2D\u5B9A\u4E49\u7684\uFF0C\u53EF\u4EE5\u4F7F\u7528\u975E\u9650\u5B9A\u540D\u6765\u5F15\u7528 \u5E26\u62EC\u53F7\u7684\u5E38\u6570\u679A\u4E3E\u8868\u8FBE\u5F0F +\uFF0C-\uFF0C~\u4E00\u5143\u8FD0\u7B97\u7B26\u4E00\u4E2A\u5E94\u7528\u4E8E\u5E38\u6570\u679A\u4E3E\u8868\u8FBE\u5F0F +\uFF0C-\uFF0C*\uFF0C/\uFF0C%\uFF0C&lt;&lt;\uFF0C&gt;&gt;\uFF0C&gt;&gt;&gt;\uFF0C&amp;\uFF0C|\uFF0C^\u4E8C\u5143\u8FD0\u7B97\u7B26\uFF0C\u5E38\u6570\u679A\u4E3E\u8868\u8FBE\u5F0F\u505A\u4E3A\u5176\u4E2D\u4E00\u4E2A\u64CD\u4F5C\u5BF9\u8C61\u3002\u82E5\u5E38\u6570\u679A\u4E3E\u8868\u8FBE\u5F0F\u6C42\u503C\u540E\u4E3ANaN\u6216Infinity\uFF0C\u5219\u4F1A\u5728\u7F16\u8BD1\u9636\u6BB5\u62A5\u9519</p></blockquote></li></ol><p>\u6240\u6709\u5176\u4ED6\u60C5\u51B5\u7684\u679A\u4E3E\u6210\u5458\u4F1A\u88AB\u5F53\u4F5C\u662F\u8BA1\u7B97\u5F97\u51FA\u7684\u503C</p><h4>\u5E38\u6570\u679A\u4E3E</h4><p>\u5E38\u6570\u679A\u4E3E\u662F\u4F7F\u7528const enum\u5B9A\u4E49\u7684\u679A\u4E3E\u7C7B\u578B</p><p>\u5E38\u6570\u679A\u4E3E\u4E0E\u666E\u901A\u679A\u4E3E\u7684\u533A\u522B\u662F\uFF0C\u5B83\u4F1A\u5728\u7F16\u8BD1\u9636\u6BB5\u88AB\u5220\u9664\uFF0C\u5E76\u4E14\u4E0D\u80FD\u5305\u542B\u8BA1\u7B97\u6210\u5458</p><p>\u4E0A\u9762\u7684\u7F16\u8BD1\u7ED3\u679C\u662F</p>',12),Q=n("pre",null,[n("code",{class:"language-JavaScript","v-pre":"true"},`var directions = [0 /* Up */, 1 /* Down */, 2 /* Left */, 3 /* Right */];
+`)],-1),X=n("p",null,"\u52A0\u5165\u5305\u542B\u4E86\u8BA1\u7B97\u6210\u5458\uFF0C\u5219\u4F1A\u5728\u7F16\u8BD1\u9636\u6BB5\u62A5\u9519",-1),Y=n("img",{src:m},null,-1),Z=n("h4",null,"\u5916\u90E8\u679A\u4E3E",-1),nn=n("p",null,"\u5916\u90E8\u679A\u4E3E\u662F\u4F7F\u7528declare enum\u5B9A\u4E49\u7684\u679A\u4E3E\u7C7B\u578B",-1),sn=n("img",{src:T},null,-1),on=n("p",null,"\u4E4B\u524D\u63D0\u5230\u8FC7\uFF0Cdeclare \u5B9A\u4E49\u7684\u7C7B\u578B\u53EA\u4F1A\u7528\u4E8E\u7F16\u8BD1\u65F6\u7684\u68C0\u67E5\uFF0C\u7F16\u8BD1\u7ED3\u679C\u4E2D\u4F1A\u88AB\u5220\u9664\u3002",-1),en=n("p",null,"\u4E0A\u4F8B\u7684\u7F16\u8BD1\u7ED3\u679C\u662F\uFF1A",-1),tn=n("pre",null,[n("code",{"v-pre":"true"},`var directions = [Directions.Up, Directions.Down, Directions.Left, Directions.Right];
+`)],-1),an=n("p",null,"\u5916\u90E8\u679A\u4E3E\u4E0E\u58F0\u660E\u8BED\u53E5\u4E00\u6837\uFF0C\u5E38\u51FA\u73B0\u5728\u58F0\u660E\u6587\u4EF6\u4E2D",-1),ln=n("p",null,"\u540C\u65F6\u4F7F\u7528declare\u548Cconst\u4E5F\u662F\u53EF\u4EE5\u7684",-1),cn=n("pre",null,[n("code",{class:"language-JavaScript","v-pre":"true"},`declare const enum Directions {
+    Up,
+    Down,
+    Left,
+    Right
+}
+
+let directions = [Directions.Up, Directions.Down, Directions.Left, Directions.Right];
+`)],-1),un=n("p",null,"\u7F16\u8BD1\u7ED3\u679C\uFF1A",-1),rn=n("pre",null,[n("code",{class:"language-JavaScript","v-pre":"true"},`var directions = [0 /* Up */, 1 /* Down */, 2 /* Left */, 3 /* Right */];
+//\u76EE\u524D\u6D4B\u8BD5\u8FD9\u6837\u5199\u4E5F\u4F1A\u62A5\u9519\uFF0C\u539F\u56E0\u4E5F\u662F\u7F16\u8BD1\u540E\u5C31\u4F1A\u62A5\u9519\u627E\u4E0D\u5230Directions
+`)],-1);function pn(t,a){return s(),o(c,null,[S,v,w,b,f,M,F,k,j,W,J,R,x,C,q,L,N,U,B,V,$,E,z,I,A,G,H,K,O,P,Q,X,Y,Z,nn,sn,on,en,tn,an,ln,cn,un,rn],64)}const e={render:pn};e.__hmrId="D:/lhdtext/vue3/my-personal-blog/src/markdown/FontEnd/Ts/enum.md";const _n={components:{MarkDownComponent:e},setup(){}};function dn(t,a,hn,Dn,yn,gn){const l=r("MarkDownComponent");return s(),o("article",null,[p(l)])}const Tn=i(_n,[["render",dn]]);export{Tn as default};
