@@ -11,8 +11,8 @@ let list = [
   }
 ]
 Mock.mock('/technology','get',option => {
-  const { username } = JSON.parse(option.body)
-  if(username == 'lhd'){
+  const { username,password} = JSON.parse(option.body)
+  if(username == 'lhd' && password == '211314'){
     return {
       list,
       code:200,
@@ -20,8 +20,9 @@ Mock.mock('/technology','get',option => {
     }
   }else{
     return {
-      code:401,
-      msg:'获取失败'
+      list,
+      code:200,
+      msg:'成功'
     }
   }
 })

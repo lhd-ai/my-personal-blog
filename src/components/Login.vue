@@ -24,8 +24,20 @@ export default {
       password: ''
     }
   },
-  created(){
+  created() {
+    sessionStorage.clear()
+    if (location.href.indexOf("#reloaded") == -1) {
+        location.href = location.href + "#reloaded";
+        location.reload();
+      }
 
+  },
+  mounted() {
+    document.onkeydown = (e) => {
+      if (e.keyCode == 13) {
+        this.signIn()
+      }
+    }
   },
   methods: {
     signIn() {
@@ -33,8 +45,8 @@ export default {
         url: '/login',
         method: 'post',
         data: {
-          username:this.username,
-          password:this.password
+          username: this.username,
+          password: this.password
         }
       })
         .then(res => {
@@ -45,17 +57,18 @@ export default {
               showClose: true,
               message: res.data.msg,
               type: 'error',
-              duration:2000
+              duration: 2000
             })
-          }else{
+          } else {
             sessionStorage['username'] = res.data.name
+            sessionStorage['password'] = res.data.password
+            sessionStorage['token'] = res.data.token
             this.$router.replace('/home')
-            
             ElMessage({
               showClose: true,
               message: res.data.msg,
               type: 'success',
-              duration:2000
+              duration: 2000
             })
           }
         })

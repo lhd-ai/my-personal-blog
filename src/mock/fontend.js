@@ -22,6 +22,10 @@ let obj = [
           {
             name: '监听器',
             path: '/vue-watch'
+          },
+          {
+            name:'自定义指令',
+            path:'/vue-custorm'
           }
         ]
       },
@@ -218,8 +222,8 @@ let obj = [
   }
 ]
 Mock.mock('/fontend', 'get', option => {
-  const { username } = JSON.parse(option.body)
-  if (username == 'lhd') {
+  const { username,password } = JSON.parse(option.body)
+  if (username == 'lhd' && password == '211314') {
     return {
       obj,
       code: 200,
@@ -227,7 +231,8 @@ Mock.mock('/fontend', 'get', option => {
     }
   } else {
     return {
-      code: 401,
+      obj,
+      code: 200,
       msg: '获取失败'
     }
   }

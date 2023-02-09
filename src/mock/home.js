@@ -15,13 +15,13 @@ let dataList = [
   },
   {
     name:'面试',
-    path:'/fontend'
+    path:'/interview'
   }
 ]
 
 Mock.mock('/home','get',option => {
-  const { username } = JSON.parse(option.body)
-  if(username === 'lhd'){
+  const { username ,password} = JSON.parse(option.body)
+  if(username === 'lhd' && password == '211314'){
     return {
       dataList,
       code:200,
@@ -29,7 +29,8 @@ Mock.mock('/home','get',option => {
     }
   }else{
     return {
-      code:401,
+      dataList:dataList.filter((item) => item.name != '面试'),
+      code:200,
       msg:'获取失败'
     }
   }

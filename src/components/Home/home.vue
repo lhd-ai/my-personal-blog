@@ -14,7 +14,7 @@
         </el-dropdown>
       </div>
     </div>
-    <el-dropdown>
+    <el-dropdown >
       <span class="el-dropdown-link">
         {{ username }}.blog
       </span>
@@ -25,7 +25,7 @@
       </template>
     </el-dropdown>
   </div>
-  <router-view></router-view>
+  <router-view ></router-view>
 </template>
 
 <script>
@@ -34,6 +34,7 @@ export default {
   data() {
     return {
       username: sessionStorage['username'],
+      password: sessionStorage['password'],
       dataList: []
       
     }
@@ -43,7 +44,7 @@ export default {
   },
   methods: {
     signOut() {
-      sessionStorage.removeItem('username')
+      sessionStorage.clear()
       this.$router.replace('/login')
     },
     getData() {
@@ -51,7 +52,8 @@ export default {
         url: '/home',
         method: 'get',
         data: {
-          username: this.username
+          username: this.username,
+          password:this.password
         }
       })
         .then(res => {

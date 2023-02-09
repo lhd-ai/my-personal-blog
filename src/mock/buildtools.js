@@ -56,8 +56,8 @@ let obj = [
   }
 ]
 Mock.mock('/buildtools', 'get', option => {
-  const { username } = JSON.parse(option.body)
-  if (username == 'lhd') {
+  const { username,password} = JSON.parse(option.body)
+  if (username == 'lhd' && password == '211314') {
     return {
       obj,
       code: 200,
@@ -65,7 +65,8 @@ Mock.mock('/buildtools', 'get', option => {
     }
   } else {
     return {
-      code: 401,
+      obj,
+      code: 200,
       msg: '获取失败'
     }
   }
