@@ -520,7 +520,55 @@ export default  [
           textName:'事件循环'
         }
       },
-
+      {
+        path:'/interview-select',
+        component: () => import('@component/Home/InterView/CssView/select.vue'),
+        meta:{
+          textName:'css选择器'
+        }
+      },
+      {
+        path:'/interview-center',
+        component: () => import('@component/Home/InterView/CssView/center.vue'),
+        meta:{
+          textName:'元素水平垂直居中'
+        }
+      },
+      {
+        path:'/interview-layout',
+        component: () => import('@component/Home/InterView/CssView/layout.vue'),
+        meta:{
+          textName:'双栏/三栏布局'
+        }
+      },
+      {
+        path:'/interview-bfc',
+        component: () => import('@component/Home/InterView/CssView/bfc.vue'),
+        meta:{
+          textName:'BFC'
+        }
+      },
+      {
+        path:'/interview-scattered',
+        component: () => import('@component/Home/InterView/CssView/scattered.vue'),
+        meta:{
+          textName:'零散'
+        }
+      },
+      {
+        path:'/interview-copy',
+        component: () => import('@component/Home/InterView/JsView/copy.vue'),
+        meta:{
+          textName:'浅拷贝/深拷贝'
+        }
+      },
+      {
+        path:'/interview-debounce',
+        component: () => import('@component/Home/InterView/JsView/debounce.vue'),
+        meta:{
+          textName:'防抖/节流'
+        }
+      }
     ]
 
   }

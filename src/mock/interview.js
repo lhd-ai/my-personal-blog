@@ -21,8 +21,46 @@ let obj = [
         name:'事件循环',
         path:'/interview-eventCycle'
       },
+      {
+        name:'浅拷贝/深拷贝',
+        path:'/interview-copy'
+      },
+      {
+        name:'防抖/节流',
+        path:'/interview-debounce'
+      }
     ]
   },
+  {
+    name: 'Css',
+    children: [
+      {
+        name:'选择器',
+        path:'/interview-select'
+      },
+      {
+        name:'水平垂直居中',
+        path:'/interview-center'
+      },
+      {
+        name:'双栏/三栏布局',
+        path:'/interview-layout'
+      },
+      {
+        name:'BFC',
+        path:'/interview-bfc'
+      },
+      {
+        name:'零散',
+        path:'/interview-scattered'
+      }
+    ]
+  },{
+    name:'Vue',
+    children:[
+      
+    ]
+  }
 ]
 Mock.mock('/interview', 'get', option => {
   const { username,password} = JSON.parse(option.body)
