@@ -16,6 +16,10 @@ let dataList = [
   {
     name:'面试',
     path:'/interview'
+  },
+  {
+    name:'项目回顾',
+    path:'/item'
   }
 ]
 
@@ -29,7 +33,7 @@ Mock.mock('/home','get',option => {
     }
   }else{
     return {
-      dataList:dataList.filter((item) => item.name != '面试'),
+      dataList:dataList.filter((item) => item.name != '面试' && item.name != '项目回顾'),
       code:200,
       msg:'获取失败'
     }

@@ -9,6 +9,8 @@ import './mock/technology'
 import './mock/buildtools'
 import './mock/fontend'
 import './mock/interview'
+import './mock/item'
+import './mock/hxfgzh'
 
 // import 'element-plus/theme-chalk/src/index.scss'
 const app = createApp(App)

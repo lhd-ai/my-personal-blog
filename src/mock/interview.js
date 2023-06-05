@@ -58,8 +58,15 @@ let obj = [
   },{
     name:'Vue',
     children:[
-      
+      {
+        name:'组件通信',
+        path:'/interview-comm'
+      }
     ]
+  },
+  {
+    name:'面试模板',
+    path:'/template'
   }
 ]
 Mock.mock('/interview', 'get', option => {

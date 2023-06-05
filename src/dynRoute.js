@@ -1,10 +1,10 @@
-export default  [
+export default [
   {
     path: '/technology',
     component: () => import('./components/Home/Technology/index.vue'),
     meta: {
       textName: 'markdown',
-      role:['admin','editor']
+      role: ['admin', 'editor']
     },
     children: [
       {
@@ -30,8 +30,8 @@ export default  [
   {
     path: '/buildtools',
     component: () => import('./components/Home/BuildTools/index.vue'),
-    meta:{
-      role:['admin','editor']
+    meta: {
+      role: ['admin', 'editor']
     },
     children: [
       {
@@ -132,7 +132,7 @@ export default  [
     component: () => import('./components/Home/FontEnd/index.vue'),
     meta: {
       textName: '前端',
-      role:['admin','editor']
+      role: ['admin', 'editor']
     },
     children: [
       {
@@ -163,14 +163,14 @@ export default  [
             path: '/vue-compouted',
             component: () => import('./components/Home/FontEnd/vue3/start/computed.vue'),
             meta: {
-              textName:'计算属性'
+              textName: '计算属性'
             }
           },
           {
             path: '/vue-watch',
             component: () => import('./components/Home/FontEnd/vue3/start/watch.vue'),
             meta: {
-              textName:'监听器'
+              textName: '监听器'
             }
           },
           {
@@ -180,7 +180,7 @@ export default  [
               textName: '自定义指令'
             }
           },
-         
+
           {
             path: '/vue3-setupStart',
             component: () => import('./components/Home/FontEnd/vue3/Combined/setup.vue'),
@@ -211,7 +211,7 @@ export default  [
           },
           //将组件与路由映射起来（1）
           {
-            path:'/vue3-routerInstallation',
+            path: '/vue3-routerInstallation',
             component: () => import("@component/Home/FontEnd/vue3/Router/inStallation.vue"),
             meta: {
               textName: '路由安装'
@@ -221,7 +221,7 @@ export default  [
             path: '/vue3-routerGetStart',
             component: () => import("@component/Home/FontEnd/vue3/Router/getStart.vue"),
             meta: {
-              textName:'入门'
+              textName: '入门'
             }
           },
           {
@@ -343,7 +343,7 @@ export default  [
               textName: 'Action'
             }
           },
-          
+
         ]
       },
       {
@@ -471,13 +471,13 @@ export default  [
         ]
       },
       {
-        path:'/js',
-        children:[
+        path: '/js',
+        children: [
           {
-            path:"/js-proxy",
+            path: "/js-proxy",
             component: () => import('@component/Home/FontEnd/Js/proxy.vue'),
             meta: {
-              textName:'proxy'
+              textName: 'proxy'
             }
           }
         ]
@@ -489,87 +489,125 @@ export default  [
     component: () => import('./components/Home/InterView/index.vue'),
     meta: {
       textName: '面试',
-      role:['admin']
+      role: ['admin']
     },
-    children:[
+    children: [
       {
-        path:'',
+        path: '',
         component: () => import('@component/Home/InterView/Integrated/permissions.vue'),
         meta: {
-          textName:'权限管理'
+          textName: '权限管理'
         }
       },
       {
-        path:'/interview-permissions',
+        path: '/interview-permissions',
         component: () => import('@component/Home/InterView/Integrated/permissions.vue'),
         meta: {
-          textName:'权限管理'
+          textName: '权限管理'
         }
       },
       {
-        path:'/interview-prototype',
+        path: '/interview-prototype',
         component: () => import('@component/Home/InterView/JsView/prototype.vue'),
         meta: {
-          textName:'原型/原型链'
+          textName: '原型/原型链'
         }
       },
       {
-        path:'/interview-eventCycle',
+        path: '/interview-eventCycle',
         component: () => import('@component/Home/InterView/JsView/eventCycle.vue'),
         meta: {
-          textName:'事件循环'
+          textName: '事件循环'
         }
       },
       {
-        path:'/interview-select',
+        path: '/interview-select',
         component: () => import('@component/Home/InterView/CssView/select.vue'),
-        meta:{
-          textName:'css选择器'
+        meta: {
+          textName: 'css选择器'
         }
       },
       {
-        path:'/interview-center',
+        path: '/interview-center',
         component: () => import('@component/Home/InterView/CssView/center.vue'),
-        meta:{
-          textName:'元素水平垂直居中'
+        meta: {
+          textName: '元素水平垂直居中'
         }
       },
       {
-        path:'/interview-layout',
+        path: '/interview-layout',
         component: () => import('@component/Home/InterView/CssView/layout.vue'),
-        meta:{
-          textName:'双栏/三栏布局'
+        meta: {
+          textName: '双栏/三栏布局'
         }
       },
       {
-        path:'/interview-bfc',
+        path: '/interview-bfc',
         component: () => import('@component/Home/InterView/CssView/bfc.vue'),
-        meta:{
-          textName:'BFC'
+        meta: {
+          textName: 'BFC'
         }
       },
       {
-        path:'/interview-scattered',
+        path: '/interview-scattered',
         component: () => import('@component/Home/InterView/CssView/scattered.vue'),
-        meta:{
-          textName:'零散'
+        meta: {
+          textName: '零散'
         }
       },
       {
-        path:'/interview-copy',
+        path: '/interview-copy',
         component: () => import('@component/Home/InterView/JsView/copy.vue'),
-        meta:{
-          textName:'浅拷贝/深拷贝'
+        meta: {
+          textName: '浅拷贝/深拷贝'
         }
       },
       {
-        path:'/interview-debounce',
+        path: '/interview-debounce',
         component: () => import('@component/Home/InterView/JsView/debounce.vue'),
-        meta:{
-          textName:'防抖/节流'
+        meta: {
+          textName: '防抖/节流'
+        }
+      },
+      {
+        path: '/interview-comm',
+        component: () => import('@component/Home/InterView/VueView/comm.vue'),
+        meta: {
+          textName: '组件通信'
+        }
+      },
+      {
+        path: '/template',
+        component: () => import('@component/Home/InterView/template.vue'),
+        meta: {
+          textName: '面试模板'
         }
       }
     ]
 
+  },
+  {
+    path: '/item',
+    component: () => import("@component/Home/Item/index.vue"),
+    meta: {
+      textName: '项目回顾',
+      role: ['admin']
+    },
+    children: [
+      {
+        path: '',
+        component: () => import('@component/Home/Item/hxfGzh/index.vue'),
+        meta: {
+          textName: '慧薪福公众号'
+        }
+      },
+      {
+        path: '/hxfgzh',
+        component: () => import('@component/Home/Item/hxfGzh/index.vue'),
+        meta: {
+          textName: '慧薪福公众号'
+        }
+      },
+    ]
   }
 ]

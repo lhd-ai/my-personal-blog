@@ -11,7 +11,7 @@
         <div class="left">1leftleftleftleft</div>
         <div class="right">2rightrightrightrightrightrightright</div>
     </div>
-    <p>左边子元素设置固定宽度，设置左浮动，右边子元素设置左外边距值为左边子元素值，父元素设置BFC，防止右边元素的内容进入左边子元素中</p>
+    <p>左边子元素设置固定宽度，设置左浮动，右边子元素设置左外边距值为左边子元素值，右边元素设置BFC，防止右边元素的内容进入左边子元素中</p>
     <p>还可以左边设置左浮动，右边设置BFC，这样就不用设置外边距了</p>
 
     <h1>三栏布局</h1>
@@ -28,6 +28,7 @@
         <div class="left">left</div>
         <div class="right">right</div>
         <div class="middle">middle</div>
+
     </div>
     <p>左边子元素设置固定宽度，设置左浮动，右边子元素设置固定宽度，设置右浮动，中间元素宽度自适应，设置左右外边距值为左子元素，右子元素值，特别注意，html结构中间元素要在右边元素下边否则右边元素会在下方显示</p>
 </template>

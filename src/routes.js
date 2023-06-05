@@ -32,7 +32,7 @@ router.beforeEach( (to, from) => {
   if (to.meta.textName) {
     document.title = to.meta.textName
   }
-  console.log(sessionStorage.getItem('token'))
+  // console.log(sessionStorage.getItem('token'))
   if (to.path === '/login') {
     return true
   }
