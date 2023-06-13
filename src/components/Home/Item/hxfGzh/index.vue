@@ -6,14 +6,12 @@
     <el-tabs class="eltabl demo-tabs"  @tab-click="handleClick" v-model="activeName">
       <el-tab-pane label="项目大厅" class="is-activww" name="first">
         <div class="emty" v-if="isShowImg">
-          <img src="../../../../assets/xmhg/mescroll-empty.png" alt="" class="emtyimg">
           <div class="emtytext">暂无项目</div>
         </div>
         <Xmdt v-if="!isShowImg"></Xmdt>
       </el-tab-pane>
       <el-tab-pane label="我的项目" class="is-activww" name="second">
         <div class="emty"  v-if="isShowImg">
-          <img src="../../../../assets/xmhg/mescroll-empty.png" alt="" class="emtyimg">
           <div class="emtytext">暂未报名项目</div>
         </div>
         <Wdxm v-if="!isShowImg"></Wdxm>

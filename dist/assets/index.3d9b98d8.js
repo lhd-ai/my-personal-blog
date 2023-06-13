@@ -1,0 +1,1 @@
+import{B as o,b as s}from"./index.6a6c2c3a.js";class n extends Error{constructor(r){super(r),this.name="ElementPlusError"}}function i(e,r){throw new n(`[${e}] ${r}`)}const E=({from:e,replacement:r,scope:a,version:c,ref:m,type:u="API"},t)=>{o(()=>s(t),l=>{},{immediate:!0})};export{i as t,E as u};

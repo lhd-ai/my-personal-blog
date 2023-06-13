@@ -1,8 +1,7 @@
 <template>
   <div class="background">
-    <img src="../assets/login.jpg" alt="">
   </div>
-  <div class="content">
+    <div class="content">
     <h2>LOGIN</h2>
     <div class="input-box">
       <input type="text" placeholder="请输入用户名" v-model="username" />
@@ -79,16 +78,12 @@ export default {
 
 <style lang="less" scoped>
 .background {
-  position: absolute;
-  width: 100vw;
-  height: 100vh;
   overflow: hidden;
-  z-index: -1;
+  height: 100vh;
+  background-image: url("../assets/login.jpg");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
 
-  img {
-    width: 100%;
-    height: 100%;
-  }
 }
 
 .content {
@@ -101,6 +96,7 @@ export default {
   width: 300px;
   height: 340px;
   border-radius: 10px;
+  padding: 20px;
   text-align: center;
   background-color: #00000060;
   z-index: 1;

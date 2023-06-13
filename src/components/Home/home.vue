@@ -81,7 +81,7 @@ export default {
 
 .navBar {
   width: 100vw;
-  height: 60px;
+  height: 8vh;
   background-image: linear-gradient(to right, #30cfd0, #330867);
   position: fixed;
   display: flex;
@@ -93,7 +93,7 @@ export default {
     display: flex;
 
     .item { 
-      padding:  0 15px;
+      padding:  0 5px;
       .el-dropdown-link {
         display: flex;
         color: #330867;

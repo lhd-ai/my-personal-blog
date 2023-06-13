@@ -140,6 +140,7 @@ let obj = [
   },
   {
     name: 'Ts',
+    role:['admin'],
     children: [
       {
         name: '原始数据类型',
