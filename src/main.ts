@@ -11,9 +11,14 @@ import './mock/fontend'
 import './mock/interview'
 import './mock/item'
 import './mock/hxfgzh'
+import * as ElementPlusIconsVue from '@element-plus/icons-vue'
+
 
 // import 'element-plus/theme-chalk/src/index.scss'
 const app = createApp(App)
+for (const [key, component] of Object.entries(ElementPlusIconsVue)) {
+  app.component(key, component)
+}
 const pinia = createPinia()
 app.directive('isShow',{
   created(){

@@ -1,6 +1,6 @@
 <template>
   <div class="temApp">
-    <div class="temSidebar">
+    <div class="temSidebar" v-if="isShow">
       <el-menu class="menu" router unique-opened :default-active="activeIndex" @select="handleSelect">
         <template v-for="(item, index) in dataList" :key="index">
           <el-menu-item v-if="!item.children" :index="item.path" :route="item.path">
@@ -27,7 +27,7 @@
 
       </el-menu>
     </div>
-    <div class="temContent">
+    <div class="temContent" :class="{temContentTwo:temContentTwo}">
       <!-- 显示组件内容（3） -->
       <router-view></router-view>
     </div>
@@ -36,14 +36,15 @@
 
 <script lang="ts">
 import request from '../../../request/index'
-
+import myMitt from '../../../mitt';
 export default {
   data() {
     return {
       username: sessionStorage['username'],
       dataList: [],
       activeIndex: '/interview-permissions',
-
+      isShow:true,
+      temContentTwo:false
     }
   },
   created() {
@@ -77,6 +78,12 @@ export default {
           }
         })
     }
+  },
+  mounted(){
+    myMitt.on('isShow',res=>{
+    this.isShow = res 
+    this.temContentTwo = !res 
+  })
   }
 }
 </script>

@@ -3,6 +3,8 @@
     <img src="../../assets/login.jpg" alt="">
   </div>
   <div class="navBar">
+    <el-icon v-if="isShow" @click="sendBrother"><Fold /></el-icon>
+    <el-icon v-else @click="sendBrother"><Expand /></el-icon>
     <div class="navItem">
       <div class="item" v-for="item in dataList" :key="item.name">
         <el-dropdown :disabled="!item.children">
@@ -29,13 +31,15 @@
 </template>
 
 <script>
+import myMitt from '../../mitt';
 import request from '../../request';
 export default {
   data() {
     return {
       username: sessionStorage['username'],
       password: sessionStorage['password'],
-      dataList: []
+      dataList: [],
+      isShow:true
       
     }
   },
@@ -61,6 +65,10 @@ export default {
             this.dataList = res.data.dataList
           }
         })
+    },
+    sendBrother(){
+      this.isShow = !this.isShow
+      myMitt.emit('isShow',this.isShow)
     }
   }
 }

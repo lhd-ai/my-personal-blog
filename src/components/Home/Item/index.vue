@@ -1,7 +1,7 @@
 <template>
   <div class="temApp">
-    <div class="temSidebar">
-      <el-menu class="menu" router unique-opened :default-active="activeIndex" @select="handleSelect">
+    <div class="temSidebar" v-if="isShow">
+      <el-menu class="menu" router unique-opened :default-active="activeIndex" @select="handleSelect" >
         <template v-for="(item, index) in dataList" :key="index">
           <el-menu-item v-if="!item.children" :index="item.path" :route="item.path">
             <span>{{ item.name }}</span>
@@ -27,7 +27,7 @@
 
       </el-menu>
     </div>
-    <div class="temContent">
+    <div class="temContent" :class="{temContentTwo:temContentTwo}">
       <!-- 显示组件内容（3） -->
       <router-view></router-view>
     </div>
@@ -36,13 +36,23 @@
 
 <script lang="ts" setup>
 import request from '../../../request/index'
-import { ref, reactive, watch} from 'vue'
+import { ref, reactive, watch, onMounted} from 'vue'
 import {useRoute} from 'vue-router'
+import myMitt from '../../../mitt'
 let username = ref(sessionStorage['username'])
 let password = ref(sessionStorage['password'])
+let isShow = ref(true)
+let temContentTwo = ref(false)
 let activeIndex = ref('/hxfgzh')
 let dataList = ref([])
 const route = useRoute()
+onMounted(()=>{
+
+  myMitt.on('isShow',res=>{
+    isShow.value = res as boolean
+    temContentTwo.value = !res as boolean
+  })
+})
 getDataList()
 function getDataList() {
   request({

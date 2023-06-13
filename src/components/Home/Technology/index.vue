@@ -1,13 +1,13 @@
 <template>
   <div class="temApp">
-    <div class="temSidebar">
+    <div class="temSidebar" v-if="isShow">
       <el-menu class="menu" router="true" :default-active="activeIndex" @select="handleSelect">
         <el-menu-item v-for="(item, index) in dataList" :key="index" :index="item.path" :route="item.path">
           <span>{{ item.name }}</span>
         </el-menu-item>
       </el-menu>
     </div>
-    <div class="temContent">
+    <div class="temContent" :class="{temContentTwo:temContentTwo}">
       <router-view></router-view>
     </div>
   </div>
@@ -15,12 +15,15 @@
 
 <script>
 import request from '../../../request'
+import myMitt from '../../../mitt';
 export default {
   data() {
     return {
       username: sessionStorage['username'],
       dataList: [],
       activeIndex: '/markdown',
+      isShow:true,
+      temContentTwo:false
     }
   },
   created() {
@@ -54,6 +57,12 @@ export default {
           }
         })
     }
+  },
+  mounted(){
+    myMitt.on('isShow',res=>{
+    this.isShow = res 
+    this.temContentTwo = !res 
+  })
   }
 }
 </script>
