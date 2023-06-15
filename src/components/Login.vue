@@ -112,7 +112,7 @@ export default {
     color: #fff;
     background: transparent;
     border-bottom: 2px solid #fff;
-    padding: 5px 10px;
+    padding: 10px 10px;
     outline: none;
     margin-top: 10px;
   }

@@ -1,1 +1,0 @@
-import{a3 as r,aF as n}from"./index.5cd7bac4.js";const t=o=>{const u=r(o)?o:[o],e=[];return u.forEach(s=>{var a;r(s)?e.push(...t(s)):n(s)&&r(s.children)?e.push(...t(s.children)):(e.push(s),n(s)&&((a=s.component)==null?void 0:a.subTree)&&e.push(...t(s.component.subTree)))}),e};export{t as f};
